@@ -1,0 +1,85 @@
+4.) “Additional Service Information”
+AT&T
+Upfront fees: $8.49 for regional sports fee; $19.95 activation fee (DIRECTV STREAM)
+Contract Terms: No contract
+Buyer’s Remorse: 14 days
+Install: Self default unless address needs pro
+Data Limit: 1TB (75mbps & up); unlimited for $30/mo OR if bundled w/ DIRECTV STREAM
+
+COMCAST:
+Upfront fees: None
+Contract Terms: 12-24 months
+Buyer’s Remorse: 30 days
+Install: Self or Pro
+Data Limit: 1.2 TB (after that, blocks of 50GB for $10 each; won’t exceed $100)
+
+SPECTRUM:
+Upfront fees: $9.99 activation fee; $17.99 broadcast fee for TV packages
+Contract Terms: No contract
+Buyer’s Remorse: 30 days
+Install: Self or Pro
+Data Limit: None
+
+METRONET:
+Upfront fees: $9.95 technology service fee
+Contract Terms: None
+Buyer’s Remorse: 30 days
+Install: Self or Pro
+Data Limit: None
+
+FRONTIER:
+Upfront fees: None
+Contract Terms: None
+Buyer’s Remorse: 30 days
+Install: Self or Pro
+Data Limit: None
+
+DIRECTV:
+Upfront fees: $19.95 activation fee; $9.99
+Contract Terms: 24 months
+Buyer’s Remorse: None
+Install: Pro
+Data Limit: None
+
+I3:
+Upfront fees: None
+Contract Terms: None
+Buyer’s Remorse: 30 days
+Install: Self or Pro
+Data Limit: None
+
+WOW:
+Upfront fees: $10 activation fee w/ self installation
+Contract Terms: 12 month (No contract w/ 100 mbps)
+Buyer’s Remorse: 30 days
+Install: Self or Pro
+Data Limit: None
+
+MEDIACOM:
+Upfront fees: $10 activation fee; $15 internet surcharge if you only get internet service
+Contract Terms: 12-36 months
+Buyer’s Remorse: 90 days
+Install: Self or Pro
+Data Limit: 60mbps (400GB); 100mbps (1TB); 200mbps (2TB); 500mbps (4TB); 1GIG (6TB)
+[50GB blocks after limit for $10 each]
+
+HUGHESNET:
+Upfront fees: $99 activation fee
+Contract Terms: 24 months
+Buyer’s Remorse: None
+Install: Pro-Install
+Data Limit: None
+
+CENTURY LINK:
+Upfront fees: None
+Contract Terms: None
+Buyer’s Remorse: 30 days
+Install: Self or Pro
+Data Limit: None
+
+RCN:
+Upfront fees: $9.99
+Contract Terms: None
+Buyer’s Remorse: None
+Install: Self or Pro
+Data Limit: None

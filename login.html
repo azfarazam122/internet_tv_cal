@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="Description" content="Enter your description here" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="css/login.css" />
+		<title>Login</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card">
+						<form class="box">
+							<h1>Login</h1>
+							<p class="text-muted">Please enter your Email and Password!</p>
+
+							<input type="text" name="" id="LoginEmail" placeholder="Email" />
+							<input
+								type="password"
+								name=""
+								id="LoginPassword"
+								placeholder="Password"
+							/>
+							<a class="forgot text-muted" href="#">Forgot password?</a>
+							<input
+								type="button"
+								name=""
+								id="LoginSubmitBtn"
+								value="Login"
+								onclick="loginUser()"
+								href="#"
+							/>
+							<div class="col-md-12"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"
+		integrity="sha512-USPCA7jmJHlCNRSFwUFq3lAm9SaOjwG8TaB8riqx3i/dAJqhaYilVnaf2eVUH5zjq89BU6YguUuAno+jpRvUqA=="
+		crossorigin="anonymous"
+	></script>
+	<script>
+		function loginUser() {
+			$.ajax({
+				url: "./model/user_login.php",
+				type: "POST",
+				data: {
+					userEmail: document.getElementById("LoginEmail").value,
+					userPassword: document.getElementById("LoginPassword").value,
+				},
+
+				success: function (data) {
+					debugger;
+					if (data == "Successful") {
+						var url = window.location.href;
+						url = url.replace("login.html", "index.php");
+						window.location = url;
+					} else {
+						alert("Username And Email was not Found");
+					}
+				},
+				error: function (XMLHttpRequest, textStatus, errorThrown) {
+					console.log(XMLHttpRequest);
+					console.log("Status: " + textStatus);
+					console.log("Error: " + errorThrown);
+					console.log("ERROR");
+				},
+			});
+		}
+	</script>
+</html>

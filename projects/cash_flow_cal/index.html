@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <title>Cash Flow Calc</title>
+</head>
+
+<body>
+
+  <div class="modal fade show" tabindex="-1" role="dialog" id="terms_modal" aria-model="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      
+        <div class="modal-body">
+          <p>By using the calculator, I agree that all calculations represent the past. I will not use the calculator as a
+            forecast.</p>
+        </div>
+        <div class="modal-footer">
+          <input type="checkbox"   id="agree_check">
+          <button type="button" class="btn btn-primary" disabled id="agree_button" data-toggle="modal" data-target="#terms_modal" >Agree</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <div class="container">
+
+
+    <!-- <h3>1st Deposit</h3>
+      <input type="text" name="month" id="month" placeholder="Month" />
+      <input type="text" name="year" id="year" placeholder="Year" />
+      Amount<input type="text" name="month" id="month" /> -->
+    <div class="cash_flow_box">
+      <h2><span>CALCULATE</span> CASH FLOW!</h2>
+    </div>
+
+    <div class="deposits_info_box">
+      <div class="deposit_information">
+        <h3>Deposit <bold>Information</bold>
+        </h3>
+      </div>
+
+
+      <form action="calculate.php" method="post" id="form">
+
+        <table class="deposits_table">
+
+
+          <div>
+            <!--  <tr>-->
+            <!-- <th>Month</th>-->
+            <!-- <th>Year</th> -->
+            <!-- <th>Amount</th>-->
+            <!--  </tr>-->
+            <tr id="row1">
+              <td>Deposit 1</td>
+              <td>
+                <input type="month" min="2017-01" name="month1" id="month1" placeholder="Month" oninput="showHideRows();" onblur="validateDate(this);"
+                  value="2018-01" />
+
+              </td>
+              <!-- <td>
+              <input type="number" name="year1" id="year1" placeholder="Year" value="2018" oninput="showHideRows()"/>
+            </td> -->
+              <td><input type='number' name="amount1" id="amount1" placeholder="$" value="10000" step="500" onblur="roundTo500(this);"
+                  oninput="showHideRows();" /></td>
+            </tr>
+            <tr id="row2">
+              <td>Deposit 2</td>
+              <td>
+                <input type="month" min="2017-01" name="month2" id="month2" placeholder="Month" oninput="showHideRows();" onblur="validateDate(this);"
+                  value="" />
+              </td>
+              <!-- <td>
+              <input type="number" name="year2" id="year2" placeholder="Year" value="2019" oninput="showHideRows()"/>
+            </td> -->
+              <td><input type='number' name="amount2" id="amount2" placeholder="$" value="" step="500"
+                  oninput="showHideRows();" onblur="roundTo500(this);" /></td>
+            </tr>
+            <tr id="row3">
+              <td>Deposit 3</td>
+              <td>
+                <input type="month" min="2017-01" name="month3" id="month3" placeholder="Month" oninput="showHideRows();"  value="" onblur="validateDate(this);" />
+              </td>
+              <!-- <td>
+              <input type="number" name="year3" id="year3" placeholder="Year" value="2020" oninput="showHideRows()"/>
+            </td> -->
+              <td><input type='number' name="amount3" id="amount3" placeholder="$" value="" oninput="showHideRows();" onblur="roundTo500(this);" step="500"/>
+              </td>
+            </tr>
+            <tr id="row4">
+              <td>Deposit 4</td>
+              <td>
+                <input type="month" min="2017-01" name="month4" id="month4" placeholder="Month" oninput="showHideRows()" onblur="validateDate(this);" />
+              </td>
+              <!-- <td>
+              <input type="number" name="year4" id="year4" placeholder="Year" value="2021" oninput="showHideRows()"/>
+            </td> -->
+              <td><input type='number' name="amount4" id="amount4" placeholder="$" value="" oninput="showHideRows();" onblur="roundTo500(this);" step="500"/>
+              </td>
+            </tr>
+            <tr id="row5">
+              <td>Deposit 5</td>
+              <td>
+                <input type="month" min="2017-01" name="month5" id="month5" placeholder="Month" oninput="showHideRows()"  onblur="validateDate(this);"/>
+              </td>
+              <!--  <td>
+              <input type="number" name="year5" id="year5" placeholder="Year" oninput="showHideRows()"/>
+            </td>-->
+              <td><input type="number" name="amount5" id="amount5" placeholder="$" oninput="showHideRows();" onblur="roundTo500(this);" step="500"/></td>
+            </tr>
+        </table>
+        <div style="width: 100%;display: flex;">
+          <button id="calculate" >Calculate</button>
+        </div>
+
+        <br />
+
+
+      </form>
+    </div>
+
+
+    <div id="results_box" style="display: none;">
+      <div style="padding-bottom:50px;">
+        <h3 style="color:#065559;font-size: 18px;font-weight: bold;text-align: center;margin-top:80px;">Cash flow for
+          your shares</h3>
+        <canvas id="bar-chart" width="1000" height="500"></canvas>
+
+
+      </div>
+
+      <div id="output">
+
+      </div>
+
+      <div id="cashflow_table_div" style="overflow: auto;">
+
+
+
+
+
+      </div>
+
+      <div id="asteric_box" style="display: none;padding: 10px;font-size: 14px;">
+        
+      </div>
+    </div>
+
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+  integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</html>
+
+<script>
+
+
+  var is_submitted = false;
+  var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+  var total_considered_months = [];
+  var ar = [];
+  
+
+
+  $('#form').submit(function (e) {
+    e.preventDefault();
+
+    if (is_submitted == false) {
+
+      var form_data1 = "";
+      var arr = [];
+      var date_month_array = [];
+      for (b = 1; b <= 4; b++) {
+
+        arr.push(document.getElementById('month' + b).value);
+        if (document.getElementById('month' + b).value != "") {
+          var date_month = new Date(document.getElementById('month' + b).value);
+          date_month_array.push(date_month);
+          form_data1 += "&month" + b + "=" + (date_month.getMonth() + 1);
+          form_data1 += "&year" + b + "=" + date_month.getFullYear();
+          form_data1 += "&amount" + b + "=" + document.getElementById('amount' + b).value;
+        }
+        // ar.push(date_month.getFullYear());
+
+
+      }
+
+
+
+
+
+      $.ajax({
+        url: 'calculate.php',
+        type: 'POST',
+        data: form_data1,
+        success: function (data) {
+          nameChange();
+          is_submitted = true;
+          total_considered_months = [];
+          document.getElementById('calculate').style.background = "#ddd";
+          var testhtml = "";
+          var parsed_data = JSON.parse(data);
+
+          //remove 
+
+
+          jQuery('#results_box').show(300);
+
+          graph_data = [];
+
+
+
+          graph_years = [];
+          var temp_parsed_data = [];
+          var no_of_empty_years = 0;
+          //removing years that have 0 cashflow
+          for (i = 0; i < parsed_data.length; i++) {
+            if(parsed_data[i][14]<=0){
+              no_of_empty_years++;
+            }
+            else{
+              break;
+            }
+          }
+
+          for(j=0;j<parsed_data.length-no_of_empty_years;j++){
+         temp_parsed_data[j] = parsed_data[j+no_of_empty_years];
+          }
+          parsed_data = temp_parsed_data ;
+          
+
+
+          for (a = 0; a < parsed_data.length; a++) {
+            graph_data.push(parsed_data[a][12]);
+            if(a==0){
+              graph_years.push((2017+a+no_of_empty_years)+"*");
+            }
+            else if(a==parsed_data.length-1){
+              graph_years.push(2017+a+no_of_empty_years+"**");
+            }
+            else{
+              graph_years.push(2017+a+no_of_empty_years);
+            }
+            
+          }
+
+
+          
+          chart.data.datasets[0].data = graph_data;
+          chart.data.labels = graph_years;
+          chart.update()
+
+          cashflow_table_html = "";
+          cashflow_table_html += "<table>";
+          cashflow_table_html += "<tr><th>YEAR</th>";
+
+          for (a = 0; a < parsed_data.length; a++) {
+            
+
+              cashflow_table_html += "<th>"  +graph_years[a]+ "</th>";
+            
+          
+            var temp_considered_month = 0;
+            for (f = 0; f < 12; f++) {
+              if (parsed_data[a][f][8] > 0) {
+                temp_considered_month++;
+              }
+            }
+            total_considered_months.push(temp_considered_month);
+
+          }
+
+
+
+
+          cashflow_table_html += "</tr>";
+
+          cashflow_table_html += "<tr><td>Total considered months</td>";
+
+          for (e = 0; e < total_considered_months.length; e++) {
+            cashflow_table_html += "<td>" + total_considered_months[e] + "</td>";
+          }
+
+          cashflow_table_html += "</tr>";
+
+
+          for (b = 0; b < 12; b++) {
+            cashflow_table_html += "<tr>";
+            cashflow_table_html += "<th>" + months[b] + "</th>";
+            for (c = 0; c < parsed_data.length; c++) {
+              if(parsed_data[c][b][12]==0){
+                cashflow_table_html += "<td>-----</td>";
+              }
+              else{
+                cashflow_table_html += "<td>$" + parsed_data[c][b][12].toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 }) + "</td>";
+              }
+              
+            }
+            cashflow_table_html += "</tr>";
+          }
+
+          cashflow_table_html += "<tr>";
+          cashflow_table_html += "<th style='background:#222;'>CASHFLOW</th>";
+          for (d = 0; d < parsed_data.length; d++) {
+            cashflow_table_html += "<td>$" + parsed_data[d][14].toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 }) + "</td>";
+          }
+          cashflow_table_html += "</tr>";
+
+          cashflow_table_html += "</table>";
+
+          document.getElementById('cashflow_table_div').innerHTML = cashflow_table_html;
+
+
+          var asteric_html = "";
+          asteric_html += "This calculation only contains real numbers from the past and therefore does not represent a forecost for the future";
+
+          
+
+          dates_array = [];
+          if(document.getElementById('month1').value!=""&&(document.getElementById('amount1').value!=""&&document.getElementById('amount1').value!=0)){
+            date = new Date(document.getElementById('month1').value);
+          dates_array.push(date);          
+        }
+
+        if(document.getElementById('month2').value!=""&&(document.getElementById('amount2').value!=""&&document.getElementById('amount2').value!=0)){
+          date = new Date(document.getElementById('month2').value);
+          dates_array.push(date);          
+        }
+
+        if(document.getElementById('month3').value!=""&&(document.getElementById('amount3').value!=""&&document.getElementById('amount3').value!=0)){
+          date = new Date(document.getElementById('month3').value);
+          dates_array.push(date);          
+        }
+
+        if(document.getElementById('month4').value!=""&&(document.getElementById('amount4').value!=""&&document.getElementById('amount4').value!=0)){
+          date = new Date(document.getElementById('month4').value);
+          dates_array.push(date);          
+        }
+
+        if(document.getElementById('month5').value!=""&&(document.getElementById('amount5').value!=""&&document.getElementById('amount5').value!=0)){
+          date = new Date(document.getElementById('month5').value);
+          dates_array.push(date);          
+        }
+         
+        first_date = dates_array.sort(function(a,b){
+  // Turn your strings into dates, and then subtract them
+  // to get a value that is either negative, positive, or zero.
+  return new Date(b.date) - new Date(a.date);
+});
+
+          var first_date = first_date[0];
+          var first_month=first_date.getMonth()+1;
+          var first_year=first_date.getFullYear();
+
+          var now = new Date()
+          var current_month=now.getMonth()+1;
+          var current_year=now.getFullYear();
+
+          if(first_month<10){
+            first_month = "0"+first_month;
+          }
+
+          if(current_month<10){
+            current_month = "0"+current_month;
+          }
+          asteric_html += "<br>* since "+first_month+"/"+first_year;
+          asteric_html += "<br>** until incl. "+current_month+"/"+current_year;
+          document.getElementById('asteric_box').innerHTML = asteric_html;
+
+          jQuery('#asteric_box').show();
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+          console.log("Error");
+          alert("there was a problem updating data");
+        },
+      });
+
+
+    }
+
+  });
+
+
+
+
+
+
+  function showHideRows() {
+
+    var noOfVisibleRows = 1;
+    for (b = 1; b <= 4; b++) {
+      if (document.getElementById('month' + b).value != "" && document.getElementById('amount' + b).value != "") {
+        noOfVisibleRows++;
+      }
+      else {
+        break;
+      }
+
+    }
+    for (a = 1; a <= 5; a++) {
+      if (a <= noOfVisibleRows) {
+        jQuery("#row" + a).show();
+      } else {
+        jQuery("#row" + a).hide();
+      }
+      // noOfVisibleRows ++;
+    }
+  }
+
+
+
+  showHideRows();
+  var years = [2017, 2018, 2019, 2020, 2021, 2022];
+
+
+
+
+  var chart = new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: years,
+      // labels: [for(i=0; i<document.getElementById()){
+
+
+      datasets: [
+        {
+          label: "CASH FLOW FOR YOUR SHARES",
+          backgroundColor: ["#065559"],
+          data: [0, 0, 0, 0, 0],
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'CASH FLOW FOR YOUR SHARES'
+      }
+    }
+  });
+
+
+
+  $(document).ready(function(){
+        jQuery("#terms_modal").modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+  });
+   
+
+  $('#agree_check').click(function() {
+  if ($(this).is(':checked')) {
+    $('#agree_button').removeAttr('disabled');
+  } else {
+    $('#agree_button').attr('disabled', 'disabled');
+  }
+});
+
+
+function roundTo500(element){
+
+  if(element.value!=Math.round(element.value / 500) * 500){
+    alert("rounding to the nearest 500");
+  }
+
+  element.value = Math.round(element.value / 500) * 500;
+
+  
+
+  setTimeout(enableAgain, 200);
+
+}
+
+function enableAgain(){
+
+  document.getElementById('calculate').style.background = "#065559";
+  document.getElementById('calculate').innerHTML = 'Calculate';
+  is_submitted = false;
+}
+function nameChange() {
+  document.getElementById('calculate').innerHTML = 'Calculated';
+
+
+    var delay = setInterval(function(){
+        
+        jQuery('#calculate')
+        //alert('loaded');
+        clearInterval(delay);
+      }, 200);
+    // do something only the first time the map is loaded
+    
+};
+
+
+
+function validateDate(element){
+ var entered_year = parseFloat(element.value.split('-')[0]);
+ var entered_month = element.value.split('-')[1];
+
+ if(entered_year<2017){
+   entered_year = 2017;
+   alert("Year corrected to the minimum allowed year of 2017");
+ }
+
+ var now = new Date()
+ var current_year=now.getFullYear();
+
+ if(entered_year>current_year){
+   entered_year=current_year;
+   alert("Year corrected to the maximum allowed year of "+entered_year);
+ }
+
+ element.value = entered_year + "-" + entered_month;
+}
+
+</script>

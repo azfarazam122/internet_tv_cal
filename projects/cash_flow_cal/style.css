@@ -1,0 +1,137 @@
+
+  .cash_flow_box{
+background:#065559;
+padding:10px;
+margin-bottom: 20px;
+text-align: center;
+  }
+
+  .cash_flow_box span{
+color:#D6D519;
+  }
+  
+  .cash_flow_box h2{
+    color:#fff;
+    text-align: center;
+  }
+
+  .deposit_information h3{
+    text-align: center;
+    color:#065559;
+  }
+
+  .deposit_information bold{
+    font-weight: bold;
+  }
+
+  .deposits_info_box{
+    padding: 10px;
+    background: #eee;
+  }
+.deposits_table td:nth-child(1){
+  background:#065559;
+  color:#D6D519;
+  
+  padding: 20px;
+}
+
+.deposits_table{
+ 
+  margin: auto;
+  border-collapse: inherit;
+}
+
+.deposits_table tr{
+  margin-bottom: 10px;
+  background: #fff;
+  
+}
+
+.deposits_table td{
+  border-top:5px #eee solid;
+  border-bottom:5px #eee solid;
+ padding: 5px;
+}
+
+.deposits_table input[type="month"]{
+width: 150px;;
+
+}
+
+.deposits_table input{
+  background: #f1f1f1;
+ height: 40px;
+  transition: all ease 0.3s;
+  border: none;
+  padding-left: 10px;
+  padding-right: 5px;
+ 
+  width: 100%;
+}
+
+.deposits_table input:hover{
+  background: #fafafa;
+
+}
+
+
+.deposits_table input:focus{
+  background: #fafafa;
+}
+
+form button{
+  background:#065559;
+  color:#fff;
+  margin-top: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  transition: all ease 0.3s;
+}
+
+form button:hover{
+  background:#267579;
+
+}
+
+form button:focus{
+  background:#267579;
+
+}
+
+
+#cashflow_table_div table{
+width: 100%;
+border-collapse: inherit;
+}
+
+#cashflow_table_div th{
+  background:#065559;
+  color:#D6D519;
+  
+  padding: 20px;
+  text-align: center;
+
+}
+
+
+#cashflow_table_div td{
+background: #eee;
+padding: 5px;
+color:#065559;
+font-weight: bold;
+text-align: center;
+}
+
+#cashflow_table_div td:nth-child(1){
+  width: 100px;
+}
+
+
+#cashflow_table_div tr:nth-child(15) td{
+  background: #222;
+  color:#D6D519;
+}

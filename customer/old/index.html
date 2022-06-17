@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styleOfIonSlider.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <title>Internet Tv</title>
+  </head>
+  <body>
+    <div>
+      <div style="padding-top: 40px; text-align: center">
+        <div class="btn hover_effect" id="tab_1" onclick="displayTabs(this)">
+          AT&T
+        </div>
+        <div class="btn hover_effect" id="tab_2" onclick="displayTabs(this)">
+          Comcast
+        </div>
+        <div class="btn hover_effect" id="tab_3" onclick="displayTabs(this)">
+          Spectrum
+        </div>
+        <div class="btn hover_effect" id="tab_4" onclick="displayTabs(this)">
+          Metronet
+        </div>
+        <div class="btn hover_effect" id="tab_5" onclick="displayTabs(this)">
+          i3Broadband
+        </div>
+        <div class="btn hover_effect" id="tab_6" onclick="displayTabs(this)">
+          Frontier
+        </div>
+        <div class="btn hover_effect" id="tab_7" onclick="displayTabs(this)">
+          etc.
+        </div>
+      </div>
+      <!-- ____________________________________________________________________________ -->
+      <!-- AT & T -->
+      <div id="tabDetails_1">
+        <h1 style="text-align: center; font-size: 35px; color: #00afe8">
+          AT&T
+        </h1>
+        <div class="row register-form">
+          <!-- ____________________________ -->
+          <div class="col-md-6">
+            <h3 style="text-align: center"><u> AT&T TV Options </u></h3>
+            <div>
+              <p style="color: #00afe8; font-size: 16px; font-weight: bold">
+                <u> Channel Lineup</u>
+              </p>
+              <div class="row" style="text-align: left">
+                <div class="col-md-6" style="margin-top: 10px">
+                  <div class="form-check" style="margin: 10px">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      onchange="runOperation_Tab1()"
+                      name="channelLineup_checkboxes"
+                      id="entertainment"
+                      value="69.99"
+                    />
+                    <label
+                      class="form-check-label"
+                      style="font-weight: bold"
+                      for="entertainment"
+                    >
+                      Entertainment (69.99)
+                    </label>
+                    <div>
+                      <p onclick="displayEntertainmentFeatures()">
+                        <u class="seeFeaturesHoverStyle"
+                          >See Features And Benefits</u
+                        >
+                      </p>
+                      <div id="Entertainment_at_t" style="display: none">
+                        <span>65+ channels</span>
+                        <br />
+                        <span>40,000+ on-demand titles</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check" style="margin: 10px">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="channelLineup_checkboxes"
+                      onchange="runOperation_Tab1()"
+                      id="choice"
+                      checked
+                      value="84.99"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="choice"
+                      style="font-weight: bold"
+                    >
+                      Choice (84.99)
+                    </label>
+                    <div>
+                      <p onclick="displayChoiceFeatures()">
+                        <u class="seeFeaturesHoverStyle"
+                          >See Features And Benefits</u
+                        >
+                      </p>
+                      <div id="Choice_at_t" style="display: none">
+                        <span>90+ channels</span>
+                        <br />
+                        <span>45,000+ on-demand titles</span>
+                        <br />
+                        <span>. HBO Max included for 1 year.</span>
+                        <br />
+                        <span
+                          >. Enjoy Regional Sports Networks without fees.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check" style="margin: 10px">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="channelLineup_checkboxes"
+                      onchange="runOperation_Tab1()"
+                      id="ultimate"
+                      value="94.99"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="ultimate"
+                      style="font-weight: bold"
+                    >
+                      Ultimate (94.99)
+                    </label>
+                    <div>
+                      <p onclick="displayUltimateFeatures()">
+                        <u class="seeFeaturesHoverStyle"
+                          >See Features And Benefits</u
+                        >
+                      </p>
+                      <div id="Ultimate_at_t" style="display: none">
+                        <span>130+ channels</span>
+                        <br />
+                        <span>55,000+ on-demand</span>
+                        <br />
+                        <span>. HBO Max included for 1 year.</span>
+                        <br />
+                        <span
+                          >. Enjoy Regional Sports Networks without fees.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check" style="margin: 10px">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="channelLineup_checkboxes"
+                      onchange="runOperation_Tab1()"
+                      id="Premier"
+                      value="139.99"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="Premier"
+                      style="font-weight: bold"
+                    >
+                      Premier (139.99)
+                    </label>
+                    <div>
+                      <p onclick="displayPremierFeatures()">
+                        <u class="seeFeaturesHoverStyle"
+                          >See Features And Benefits</u
+                        >
+                      </p>
+                      <div id="Premier_at_t" style="display: none">
+                        <span>All channels included</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <span style="font-size: 14px; font-weight: bold">
+                    <u> TV's </u></span
+                  >
+                  <input type="text" id="tv" />
+                  <!-- -------------- -->
+                  <div>
+                    <span style="font-size: 14px; font-weight: bold">
+                      <u> Equipment Options</u></span
+                    >
+                    <div style="text-align: left">
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="equipmentOptions_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="freeDVR"
+                          value="Free"
+                          checked
+                        />
+                        <label class="form-check-label" for="freeDVR">
+                          20 Hour DVR (Free)
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="equipmentOptions_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="unlimitedDVR"
+                          value="$10"
+                        />
+                        <label class="form-check-label" for="unlimitedDVR">
+                          Unlimited DVR ($10)
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -------------- -->
+                  <div>
+                    <span style="font-size: 14px; font-weight: bold"
+                      ><u> Premium Options </u>
+                    </span>
+                    <div style="text-align: left">
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="premiumChannels_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="HBO"
+                          value="$14.99"
+                        />
+                        <label class="form-check-label" for="HBO">
+                          HBO Max
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="premiumChannels_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="cinemax"
+                          value="$11"
+                        />
+                        <label class="form-check-label" for="cinemax">
+                          Cinemax
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="premiumChannels_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="showtime"
+                          checked
+                          value="$11"
+                        />
+                        <label class="form-check-label" for="showtime">
+                          Showtime
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="premiumChannels_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="starz"
+                          value="$11"
+                        />
+                        <label class="form-check-label" for="starz">
+                          Starz
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="premiumChannels_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="epix"
+                          value="$6"
+                        />
+                        <label class="form-check-label" for="epix">
+                          Epix
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="premiumChannels_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="moviesExtra"
+                          value="$5"
+                        />
+                        <label class="form-check-label" for="moviesExtra">
+                          Movies Extra Pack
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="premiumChannels_checkboxes"
+                          onchange="runOperation_Tab1()"
+                          id="NBA"
+                          value="$40"
+                        />
+                        <label class="form-check-label" for="NBA">
+                          NBA League Pass
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -------------- -->
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <!-- -------------- -->
+            <h3 style="text-align: center"><u> AT&T Internet Options </u></h3>
+            <div style="text-align: center">
+              <label style="font-size: 18px; padding: 20px; margin-right: 5px"
+                >Modem Rental</label
+              >
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="modernRental"
+                  onchange="runOperation_Tab1()"
+                  id="yesModernRental"
+                  checked
+                  value="yes"
+                />
+                <label class="form-check-label" for="yesModernRental"
+                  >Yes</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="modernRental"
+                  onchange="runOperation_Tab1()"
+                  id="noModernRental"
+                  value="no"
+                />
+                <label class="form-check-label" for="noModernRental">No</label>
+              </div>
+              <div>
+                <p
+                  style="
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 40px;
+                  "
+                >
+                  Fiber Territory
+                </p>
+                <input type="text" id="fiber" />
+              </div>
+              <div>
+                <p
+                  style="
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 40px;
+                  "
+                >
+                  Non-Fiber Territory
+                </p>
+                <input type="text" id="nonFiber" />
+              </div>
+            </div>
+            <!-- -------------- -->
+          </div>
+          <!-- ____________________________ -->
+          <div class="col-md-6">
+            <h3 style="text-align: center"><u> Summary </u></h3>
+            <div>
+              <table class="table borderless">
+                <tr>
+                  <th style="font-size: 14px" colspan="2">
+                    Television Summary
+                  </th>
+                </tr>
+                <tr>
+                  <th scope="row" id="channelLineup_Text"></th>
+                  <td id="channelLineup_Price"></td>
+                </tr>
+                <tr id="tvbox_1_Text_At_t" style="display: none">
+                  <th scope="row" id="tvbox_1_Text">1st TV Box</th>
+                  <td id="tvbox_1_Price"></td>
+                </tr>
+                <tr id="tvbox_2_Text_At_t" style="display: none">
+                  <th scope="row" id="tvbox_2_Text">2nd TV Box</th>
+                  <td id="tvbox_2_Price"></td>
+                </tr>
+                <tr id="tvbox_3_Text_At_t" style="display: none">
+                  <th scope="row" id="tvbox_3_Text">3rd TV Box</th>
+                  <td id="tvbox_3_Price"></td>
+                </tr>
+                <tr id="tvbox_4_Text_At_t" style="display: none">
+                  <th scope="row" id="tvbox_4_Text">4th TV Box</th>
+                  <td id="tvbox_4_Price"></td>
+                </tr>
+                <tr id="tvbox_5_Text_At_t" style="display: none">
+                  <th scope="row" id="tvbox_5_Text">5th TV Box</th>
+                  <td id="tvbox_5_Price"></td>
+                </tr>
+                <tr id="tvbox_6_Text_At_t" style="display: none">
+                  <th scope="row" id="tvbox_6_Text">6th TV Box</th>
+                  <td id="tvbox_6_Price"></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="equipment_Text"></th>
+                  <td id="equipment_Price"></td>
+                </tr>
+                <!-- ----------- -->
+                <tr id="premium_1_At_t" style="display: none">
+                  <th scope="row" id="premium_1_Text">HBO Max</th>
+                  <td id="premium_1_Price"></td>
+                </tr>
+                <tr id="premium_2_At_t" style="display: none">
+                  <th scope="row" id="premium_2_Text">Cinemax</th>
+                  <td id="premium_2_Price"></td>
+                </tr>
+                <tr id="premium_3_At_t" style="display: none">
+                  <th scope="row" id="premium_3_Text">Showtime</th>
+                  <td id="premium_3_Price"></td>
+                </tr>
+                <tr id="premium_4_At_t" style="display: none">
+                  <th scope="row" id="premium_4_Text">Starz</th>
+                  <td id="premium_4_Price"></td>
+                </tr>
+                <tr id="premium_5_At_t" style="display: none">
+                  <th scope="row" id="premium_5_Text">Epix</th>
+                  <td id="premium_5_Price"></td>
+                </tr>
+                <tr id="premium_6_At_t" style="display: none">
+                  <th scope="row" id="premium_6_Text">Movies Extra Pack</th>
+                  <td id="premium_6_Price"></td>
+                </tr>
+                <tr id="premium_7_At_t" style="display: none">
+                  <th scope="row" id="premium_7_Text">NBA League Pass</th>
+                  <td id="premium_7_Price"></td>
+                </tr>
+                <!-- ----------- -->
+
+                <tr>
+                  <th style="font-weight: bold" scope="row">TOTAL</th>
+                  <td id="totalTelevision_Price"></td>
+                </tr>
+              </table>
+            </div>
+            <!-- ------------------------------------------- -->
+            <div>
+              <table class="table borderless">
+                <tr>
+                  <th style="font-size: 14px" colspan="2">Internet Summary</th>
+                </tr>
+                <tr id="fiber_1_Text_At_t" style="display: none">
+                  <th scope="row" id="fiber_Text"></th>
+                  <td id="fiber_Price"></td>
+                </tr>
+                <tr id="nonFiber_1_Text_At_t" style="display: none">
+                  <th scope="row" id="nonFiber_Text"></th>
+                  <td id="nonFiber_Price"></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="modernRental_Text"></th>
+                  <td id="modernRental_Price"></td>
+                </tr>
+                <tr>
+                  <th scope="row">TOTAL</th>
+                  <td id="totalInternet_Price"></td>
+                </tr>
+              </table>
+            </div>
+            <!-- ------------------------------------------- -->
+            <div>
+              <table class="table borderless">
+                <tr>
+                  <th scope="row" id="discount_Text">Bundle Discount</th>
+                  <td id="discount_Price">0</td>
+                </tr>
+                <tr>
+                  <th scope="row" id="installation_Text">INSTALLATION FEE</th>
+                  <td id="installation_Price">Free</td>
+                </tr>
+                <tr>
+                  <th scope="row" id="activationFee_Text">ACTIVATION FEE</th>
+                  <td id="activationFee_Price">Free</td>
+                </tr>
+                <tr style="padding-top: 20px">
+                  <th scope="row">GRAND TOTAL:</th>
+                  <td id="totalOfAll_Price"></td>
+                </tr>
+              </table>
+            </div>
+            <!-- ------------------------------------------- -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ____________________________________________________________________________ -->
+      <div id="tabDetails_2" style="display: none">
+        <h1 style="text-align: center; font-size: 35px; color: #00afe8">
+          COMCAST
+        </h1>
+        <div class="row register-form">
+          <!-- ____________________________ -->
+          <div class="col-md-6">
+            <h3 style="text-align: center"><u> COMCAST TV Options </u></h3>
+            <div>
+              <p style="color: #00afe8; font-size: 16px; font-weight: bold">
+                <u> Channel Lineup</u>
+              </p>
+              <div class="row" style="text-align: left">
+                <div class="col-md-6" style="margin-top: 10px">
+                  <div class="form-check" style="margin: 10px">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="comcast_channelLineup_checkboxes"
+                      onchange="runOperation_Tab2()"
+                      id="basic"
+                      value="$30"
+                    />
+                    <label class="form-check-label" for="basic">
+                      Basic ($30)
+                    </label>
+                  </div>
+                  <div class="form-check" style="margin: 10px">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="comcast_channelLineup_checkboxes"
+                      onchange="runOperation_Tab2()"
+                      id="extra"
+                      checked
+                      value="$70"
+                    />
+                    <label class="form-check-label" for="extra"
+                      >Extra ($70)
+                    </label>
+                  </div>
+                  <div class="form-check" style="margin: 10px">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="comcast_channelLineup_checkboxes"
+                      onchange="runOperation_Tab2()"
+                      id="preferred"
+                      value="$80"
+                    />
+                    <label class="form-check-label" for="preferred">
+                      Preferred ($80)
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <span style="font-size: 14px; font-weight: bold">
+                    <u> TV's </u></span
+                  >
+                  <input type="text" id="comcast_tv" />
+                  <!-- -------------- -->
+                  <div>
+                    <span style="font-size: 14px; font-weight: bold">
+                      <u> Equipment Options</u></span
+                    >
+                    <div style="text-align: left">
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="comcast_EquipmentOptions_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comcast_freeDVR"
+                          value="Free"
+                          checked
+                        />
+                        <label class="form-check-label" for="comcast_freeDVR">
+                          20 Hour DVR ($0)
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="comcast_EquipmentOptions_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comcast_unlimitedDVR"
+                          value="$10"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="comcast_unlimitedDVR"
+                        >
+                          Unlimited DVR ($10)
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -------------- -->
+                  <div>
+                    <span style="font-size: 14px; font-weight: bold"
+                      ><u> Premium Options </u>
+                    </span>
+                    <div style="text-align: left">
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="comcast_PremiumChannels_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comcast_HBO"
+                          value="$14.99"
+                        />
+                        <label class="form-check-label" for="comcast_HBO">
+                          HBO Max
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="comcast_PremiumChannels_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comast_cinemax"
+                          value="$11"
+                        />
+                        <label class="form-check-label" for="comast_cinemax">
+                          Cinemax
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="comcast_PremiumChannels_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comast_Showtime"
+                          checked
+                          value="$11"
+                        />
+                        <label class="form-check-label" for="comast_Showtime">
+                          Showtime
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="comcast_PremiumChannels_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comast_Starz"
+                          value="$11"
+                        />
+                        <label class="form-check-label" for="comast_Starz">
+                          Starz
+                        </label>
+                      </div>
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="comcast_PremiumChannels_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comast_SportsPackage"
+                          value="$6"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="comast_SportsPackage"
+                        >
+                          Sports Package
+                        </label>
+                      </div>
+
+                      <div class="form-check" style="margin: 10px">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="comcast_PremiumChannels_checkboxes"
+                          onchange="runOperation_Tab2()"
+                          id="comast_TMC"
+                          value="$40"
+                        />
+                        <label class="form-check-label" for="comast_TMC">
+                          TMC
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- -------------- -->
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <!-- -------------- -->
+            <h3 style="text-align: center">
+              <u> Comcast Internet Options </u>
+            </h3>
+            <div style="text-align: center">
+              <label
+                style="
+                  font-size: 18px;
+                  font-weight: bold;
+                  padding: 20px;
+                  margin-right: 5px;
+                "
+                >Modem Rental</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="comcast_modernRental"
+                  onchange="runOperation_Tab2()"
+                  id="customerOwned_ModernRental"
+                  checked
+                  value="Customer Owned"
+                />
+                <label class="form-check-label" for="customerOwned_ModernRental"
+                  >Customer Owned</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="comcast_modernRental"
+                  onchange="runOperation_Tab2()"
+                  id="XFL_ModernRental"
+                  checked
+                  value="XFl Gateway"
+                />
+                <label class="form-check-label" for="XFL_ModernRental"
+                  >XFl Gateway</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="comcast_modernRental"
+                  onchange="runOperation_Tab2()"
+                  id="XFi_ModernRental"
+                  value="XFi Complete"
+                />
+                <label class="form-check-label" for="XFi_ModernRental"
+                  >XFi Complete</label
+                >
+              </div>
+              <div>
+                <input type="text" id="comcast_Internet" />
+              </div>
+              <!-- -------------- -->
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div>
+                  <span style="font-size: 14px; font-weight: bold">
+                    <u>Installation Options</u></span
+                  >
+                  <div style="text-align: left">
+                    <div class="form-check" style="margin: 10px">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="comcast_InstallationOptions_checkboxes"
+                        id="comcast_freeDVR"
+                        value="$0"
+                        checked
+                      />
+                      <label class="form-check-label" for="comcast_freeDVR">
+                        Self Installtion ($0)
+                      </label>
+                    </div>
+                    <div class="form-check" style="margin: 10px">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="comcast_InstallationOptions_checkboxes"
+                        id="comcast_unlimitedDVR"
+                        value="$10"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="comcast_unlimitedDVR"
+                      >
+                        Tech Installation ($100)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div>
+                  <span style="font-size: 14px; font-weight: bold">
+                    <u>Autopay</u></span
+                  >
+                  <div style="text-align: left">
+                    <div class="form-check" style="margin: 10px">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="comcast_Autoplay_checkboxes"
+                        id="comcast_AutoplayYes"
+                        value="yes"
+                        onchange="runOperation_Tab2()"
+                        checked
+                      />
+                      <label class="form-check-label" for="comcast_AutoplayYes">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check" style="margin: 10px">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="comcast_Autoplay_checkboxes"
+                        id="comcast_AutoplayNo"
+                        onchange="runOperation_Tab2()"
+                        value="no"
+                      />
+                      <label class="form-check-label" for="comcast_AutoplayNo">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- -------------- -->
+            <!-- -------------- -->
+          </div>
+          <!-- ____________________________ -->
+          <div class="col-md-6">
+            <h3 style="text-align: center"><u> Summary </u></h3>
+            <div>
+              <table class="table borderless">
+                <tr>
+                  <th style="font-size: 14px" colspan="2">
+                    Television Summary
+                  </th>
+                </tr>
+                <tr>
+                  <th scope="row" id="comcast_ChannelLineup_Text">1</th>
+                  <td id="comcast_ChannelLineup_Price">Mark</td>
+                </tr>
+                <tr id="tvbox_1_Text_Comcast" style="display: none">
+                  <th scope="row" id="comcast_tvbox_1_Text">1st TV Box</th>
+                  <td id="comcast_tvbox_1_Price"></td>
+                </tr>
+                <tr id="tvbox_2_Text_Comcast" style="display: none">
+                  <th scope="row" id="comcast_tvbox_2_Text">2nd TV Box</th>
+                  <td id="comcast_tvbox_2_Price"></td>
+                </tr>
+                <tr id="tvbox_3_Text_Comcast" style="display: none">
+                  <th scope="row" id="comcast_tvbox_3_Text">3rd TV Box</th>
+                  <td id="comcast_tvbox_3_Price"></td>
+                </tr>
+                <tr id="tvbox_4_Text_Comcast" style="display: none">
+                  <th scope="row" id="comcast_tvbox_4_Text">4th TV Box</th>
+                  <td id="comcast_tvbox_4_Price"></td>
+                </tr>
+                <tr id="tvbox_5_Text_Comcast" style="display: none">
+                  <th scope="row" id="comcast_tvbox_5_Text">5th TV Box</th>
+                  <td id="comcast_tvbox_5_Price"></td>
+                </tr>
+                <tr id="tvbox_6_Text_Comcast" style="display: none">
+                  <th scope="row" id="comcast_tvbox_6_Text">6th TV Box</th>
+                  <td id="comcast_tvbox_6_Price"></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="comcast_equipment_Text">3</th>
+                  <td id="comcast_equipment_Price">Larry</td>
+                </tr>
+
+                <tr id="premiumText_1_Comcast" style="display: none">
+                  <th scope="row" id="comcast_1_premium_Text">HBO Max</th>
+                  <td id="comcast_1_premium_Price"></td>
+                </tr>
+                <tr id="premiumText_2_Comcast" style="display: none">
+                  <th scope="row" id="comcast_2_premium_Text">Cinemax</th>
+                  <td id="comcast_2_premium_Price"></td>
+                </tr>
+                <tr id="premiumText_3_Comcast" style="display: none">
+                  <th scope="row" id="comcast_3_premium_Text">Showtime</th>
+                  <td id="comcast_3_premium_Price"></td>
+                </tr>
+                <tr id="premiumText_4_Comcast" style="display: none">
+                  <th scope="row" id="comcast_4_premium_Text">Starz</th>
+                  <td id="comcast_4_premium_Price"></td>
+                </tr>
+                <tr id="premiumText_5_Comcast" style="display: none">
+                  <th scope="row" id="comcast_5_premium_Text">
+                    Sports Package
+                  </th>
+                  <td id="comcast_5_premium_Price"></td>
+                </tr>
+                <tr id="premiumText_6_Comcast" style="display: none">
+                  <th scope="row" id="comcast_6_premium_Text">TMC</th>
+                  <td id="comcast_6_premium_Price"></td>
+                </tr>
+
+                <tr>
+                  <th style="font-weight: bold" scope="row">TOTAL</th>
+                  <td id="comcast_TotalTelevision_Price">Larry</td>
+                </tr>
+              </table>
+            </div>
+            <!-- ------------------------------------------- -->
+            <div>
+              <table class="table borderless">
+                <tr>
+                  <th style="font-size: 14px" colspan="2">Internet Summary</th>
+                </tr>
+                <tr>
+                  <th scope="row" id="comcast_fiber_Text">1</th>
+                  <td id="comcast_fiber_Price">Mark</td>
+                </tr>
+                <tr>
+                  <th scope="row" id="comcast_modernRental_Text">2</th>
+                  <td id="comcast_modernRental_Price">Jacob</td>
+                </tr>
+                <tr>
+                  <th scope="row">TOTAL</th>
+                  <td id="comcast_TotalInternet_Price">Larry</td>
+                </tr>
+              </table>
+            </div>
+            <!-- ------------------------------------------- -->
+            <div>
+              <table class="table borderless">
+                <tr>
+                  <th scope="row" id="comcast_discount_Text">
+                    Bundle Discount
+                  </th>
+                  <td id="comcast_discount_Price">$-$30/month</td>
+                </tr>
+                <tr>
+                  <th scope="row" id="comcast_installation_Text">
+                    Autopay Discount
+                  </th>
+                  <td id="comcast_installation_Price"></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="comcast_activationFee_Text">
+                    INSTALLATION FEE
+                  </th>
+                  <td id="comcast_activationFee_Price">$100</td>
+                </tr>
+                <tr style="padding-top: 20px">
+                  <th scope="row">GRAND TOTAL:</th>
+                  <td id="comcast_TotalOfAll_Price">Larry</td>
+                </tr>
+              </table>
+            </div>
+            <!-- ------------------------------------------- -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ____________________________________________________________________________ -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"
+      integrity="sha512-USPCA7jmJHlCNRSFwUFq3lAm9SaOjwG8TaB8riqx3i/dAJqhaYilVnaf2eVUH5zjq89BU6YguUuAno+jpRvUqA=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.css"
+      integrity="sha512-FkNnPJevAkIHB3NqUiMadWNcoMcOCPQUMyF55JeAFZmPcSR6wK6TgZ0qL6bMrRqGNaaVS8CAwBYceORhdTUILQ=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.js"
+      integrity="sha512-kto5vajVp7FrqTvPDaiIIo2k5lt/xoEyi0LTLzujAtdLQKvLCaxRZ2/qJVW2Fc5UeTr6lVlNs8yHupc5pzJUow=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/ion.rangeSlider.js"></script>
+    <script src="js/cal.js"></script>
+  </body>
+</html>

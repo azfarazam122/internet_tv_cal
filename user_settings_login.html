@@ -1,0 +1,145 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/userSettingsLogin.css" />
+    <title>User Settings Login</title>
+    <style>
+      #userSettingsLoginSubmitBtn:hover {
+        background-color: #0b93d7;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <form class="box">
+              <h1>User Settings Login</h1>
+              <p class="text-muted">Please enter your Username and Password!</p>
+              <input
+                type="text"
+                name=""
+                id="userSettingsLoginUsername"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name=""
+                id="userSettingsLoginPassword"
+                placeholder="Password"
+              />
+              <a class="forgot text-muted" href="#">Forgot password?</a>
+              <br />
+              <input
+                type="button"
+                name=""
+                id="userSettingsLoginSubmitBtn"
+                style="
+                  padding: 10px 40px;
+                  border-radius: 30px;
+                  border: 3px solid #0b93d7;
+                "
+                value="Login"
+                onclick="loginUserSettingsAdmin()"
+              />
+              <div class="col-md-12"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"
+    integrity="sha512-USPCA7jmJHlCNRSFwUFq3lAm9SaOjwG8TaB8riqx3i/dAJqhaYilVnaf2eVUH5zjq89BU6YguUuAno+jpRvUqA=="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    function loginUserSettingsAdmin() {
+      debugger;
+      $.ajax({
+        url: './model/get_user_data.php',
+        type: 'GET',
+        data: {},
+        success: function (data) {
+          debugger;
+          var loginUserEmail = document.getElementById(
+            'userSettingsLoginUsername'
+          ).value;
+          var passwordUserEmail = document.getElementById(
+            'userSettingsLoginPassword'
+          ).value;
+          allUserData = JSON.parse(data);
+          var userEmailFound = false;
+          for (let index = 0; index < allUserData.length; index++) {
+            if (
+              loginUserEmail == allUserData[index].email &&
+              passwordUserEmail == allUserData[index].password
+            ) {
+              userEmailFound = true;
+              break;
+            }
+          }
+          if (userEmailFound == true) {
+            redirectToUserSettingsPage();
+          } else {
+            alert('User Not Found');
+          }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+          console.log(XMLHttpRequest);
+          console.log('Status: ' + textStatus);
+          console.log('Error: ' + errorThrown);
+          console.log('ERROR');
+        },
+      });
+    }
+
+    function redirectToUserSettingsPage() {
+      $.ajax({
+        url: './model/redirect_toUserSettingsPage.php',
+        type: 'POST',
+        data: {
+          userSettingsEmail: document.getElementById(
+            'userSettingsLoginUsername'
+          ).value,
+          userSettingsPassword: document.getElementById(
+            'userSettingsLoginPassword'
+          ).value,
+        },
+        success: function (data) {
+          if (data == 'UserSettingsSuccessful') {
+            var url = window.location.href;
+            url = url.replace('user_settings_login.html', 'user_settings.php');
+            window.location = url;
+          }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+          console.log(XMLHttpRequest);
+          console.log('Status: ' + textStatus);
+          console.log('Error: ' + errorThrown);
+          console.log('ERROR');
+        },
+      });
+    }
+  </script>
+</html>
