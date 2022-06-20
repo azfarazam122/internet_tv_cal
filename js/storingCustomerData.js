@@ -400,6 +400,45 @@ var SavesAllDataForCustomer = () => {
     "input[name=rcn_InstallationOptions_checkboxes]:checked"
   ).val();
 
+
+  // AT T DTV STREAM Input Fields
+
+  var at_t_dtv_channelLineup_SelectedValue = jQuery(
+    "input[name=at_t_dtv_channelLineup_checkboxes]:checked"
+  ).val();
+
+  var at_t_dtv_tvSlider_SelectedValue = slider27.val();
+
+  var at_t_dtv_equipmentOptions_SelectedValue = jQuery(
+    "input[name=at_t_dtv_EquipmentOptions_checkboxes]:checked"
+  ).val();
+
+  var at_t_dtv_premiumOptions_SelectedValue = [];
+
+  for (
+    let index = 0;
+    index <
+    document.getElementsByName("at_t_dtv_PremiumChannels_checkboxes").length;
+    index++
+  ) {
+    if (
+      document.getElementsByName("at_t_dtv_PremiumChannels_checkboxes")[index]
+        .checked == true
+    ) {
+      at_t_dtv_premiumOptions_SelectedValue.push(index);
+    }
+  }
+
+  var at_t_dtv_modemRental_SelectedValue = jQuery(
+    "input[name=at_t_dtv_modernRental]:checked"
+  ).val();
+
+  var at_t_dtv_internetOptionsSlider_SelectedValue = slider28.val();
+
+  var at_t_dtv_installationOptions_SelectedValue = jQuery(
+    "input[name=at_t_dtv_InstallationOptions_checkboxes]:checked"
+  ).val();
+
   // ________________________________________________
 
   // ________________________________________________
@@ -662,6 +701,30 @@ var SavesAllDataForCustomer = () => {
 
   jsonVariableForStoringDataInMySql.rcn_installationOptions_SelectedValue_Json =
     rcn_installationOptions_SelectedValue;
+
+
+  // AT_T_DTV Stream
+
+  jsonVariableForStoringDataInMySql.at_t_dtv_channelLineup_SelectedValue_Json =
+    at_t_dtv_channelLineup_SelectedValue;
+
+  jsonVariableForStoringDataInMySql.at_t_dtv_tvSlider_SelectedValue_Json =
+    at_t_dtv_tvSlider_SelectedValue;
+
+  jsonVariableForStoringDataInMySql.at_t_dtv_equipmentOptions_SelectedValue_Json =
+    at_t_dtv_equipmentOptions_SelectedValue;
+
+  jsonVariableForStoringDataInMySql.at_t_dtv_premiumOptions_SelectedValue_Json =
+    at_t_dtv_premiumOptions_SelectedValue;
+
+  jsonVariableForStoringDataInMySql.at_t_dtv_modemRental_SelectedValue_Json =
+    at_t_dtv_modemRental_SelectedValue;
+
+  jsonVariableForStoringDataInMySql.at_t_dtv_internetOptionsSlider_SelectedValue_Json =
+    at_t_dtv_internetOptionsSlider_SelectedValue;
+
+  jsonVariableForStoringDataInMySql.at_t_dtv_installationOptions_SelectedValue_Json =
+    at_t_dtv_installationOptions_SelectedValue;
 
   var currenttabThatsOpen;
 

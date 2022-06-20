@@ -743,6 +743,62 @@ function assigningValuesToAllInputFields(data) {
       data.rcn_installationOptions_SelectedValue_Json
     );
     runOperation_Tab12();
+  } else if (data.currenttabThatsOpen_Json == 13) {
+    // COMCAST
+    forSelectingABox(
+      "at_t_dtv_channelLineup_checkboxes",
+      data.at_t_dtv_channelLineup_SelectedValue_Json
+    );
+
+    var slider27 = $("#at_t_dtv_tv").data("ionRangeSlider");
+    slider27.update({
+      from: data["at_t_dtv_tvSlider_SelectedValue_Json"],
+    });
+
+    forSelectingABox(
+      "at_t_dtv_EquipmentOptions_checkboxes",
+      data.at_t_dtv_equipmentOptions_SelectedValue_Json
+    );
+
+    forSelectingMultipleBoxes(
+      "at_t_dtv_PremiumChannels_checkboxes",
+      data.at_t_dtv_premiumOptions_SelectedValue_Json
+    );
+    forSelectingABox(
+      "at_t_dtv_modernRental",
+      data.at_t_dtv_modemRental_SelectedValue_Json
+    );
+    var slider25 = $("#at_t_dtv_Internet").data("ionRangeSlider");
+    if (data["at_t_dtv_internetOptionsSlider_SelectedValue_Json"] == "0mbps") {
+      slider25.update({
+        from: "0",
+      });
+    } else if (
+      data["at_t_dtv_internetOptionsSlider_SelectedValue_Json"] == "300mbps"
+    ) {
+      slider25.update({
+        from: "1",
+      });
+    } else if (
+      data["at_t_dtv_internetOptionsSlider_SelectedValue_Json"] == "500mbps"
+    ) {
+      slider25.update({
+        from: "2",
+      });
+    } else if (
+      data["at_t_dtv_internetOptionsSlider_SelectedValue_Json"] == "1000mbps"
+    ) {
+      slider25.update({
+        from: "3",
+      });
+    }
+
+    forSelectingABox(
+      "at_t_dtv_InstallationOptions_checkboxes",
+      data.at_t_dtv_installationOptions_SelectedValue_Json
+    );
+
+    runOperation_Tab13();
   }
 
   // _______________________________________________________________________________

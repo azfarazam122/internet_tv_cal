@@ -4688,7 +4688,7 @@ if (isset($_SESSION['username'])) {
                                                         name="at_t_dtv_PremiumChannels_checkboxes"
                                                         onchange="runOperation_Tab13()" id="at_t_dtv_LatinoKorean"
                                                         value="$30" />
-                                                    <label class="form-check-label" for="at_t_dtv_LatinoKorean"> Latino
+                                                    <label class="form-check-label" for="at_t_dtv_LatinoKorean">
                                                         Korean
                                                     </label>
                                                 </div>
@@ -4752,7 +4752,7 @@ if (isset($_SESSION['username'])) {
                                 <div></div>
                             </div>
                             <!-- -------------- -->
-                            <h3 class="section-heading text-center">Comcast Internet Options</h3>
+                            <h3 class="section-heading text-center">AT&T_DTV Internet Options</h3>
                             <div style="text-align: center">
                                 <label class="label-heading">Modem Rental</label>
                                 <div>
@@ -4776,7 +4776,7 @@ if (isset($_SESSION['username'])) {
                                         <div style="text-align: left">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio"
-                                                    name="at_t_dtv__InstallationOptions_checkboxes"
+                                                    name="at_t_dtv_InstallationOptions_checkboxes"
                                                     onchange="runOperation_Tab13()" id="at_t_dtv__Fiber" value="$0"
                                                     checked />
                                                 <label class="form-check-label" for="at_t_dtv__Fiber">
@@ -6055,124 +6055,211 @@ if (isset($_SESSION['username'])) {
                 "<br>Installation Options = " + rcn_installationOptions_SelectedValue;
 
             document.getElementsByClassName("summary-section")[11].innerHTML;
-        }
-        // ________________________________________________
-        // ___________________________________________________
-        let uniqueLinkGenerated = false;
-        if (uniqueLinkForSpecificUser != "") {
-            uniqueLinkGenerated = true;
-        } else {
-            uniqueLinkGenerated = false;
-        }
-        // ___________________________________________________
-        $.ajax({
-            url: "./php/submit_email.php",
-            type: "POST",
-            data: {
-                userName: UsernameOfCustomer,
-                uniqueLinkOfCustomer: uniqueLinkForSpecificUser,
-                name: userData[0].name,
-                email: userData[0].email,
-                mailhost: userData[0].mail_host,
-                mailport: userData[0].mail_port,
-                mailencryption: userData[0].mail_encryption,
-                mailauth: userData[0].mail_auth,
-                mailfrom: userData[0].mail_from_address,
-                mailusername: userData[0].mail_username,
-                mailpassword: userData[0].mail_password,
-                customeremail: document.getElementById("staticEmail").value,
-                summarymessage: summaryMessage,
-                inputsmessage: inputsMessage,
-            },
-            success: function(data) {
-                debugger;
-                if (uniqueLinkGenerated == true) {
-                    console.log("Mail Send! Successfully");
-                    $('#myExampleModal').modal('show');
-                    forInsertingDataInEmail_Data_Table()
-                } else {
-                    console.log("Mail Send! Successfully");
-                    $('#myExampleModal2').modal('show');
+        } else if (document.getElementById("tabDetails_13").style.display == "") {
+            // COMCAST Input Fields
+            if (
+                jQuery("input[name=at_t_dtv_channelLineup_checkboxes]:checked").val() !=
+                undefined
+            ) {
+                var at_t_dtv_channelLineup_SelectedValue = document.getElementById(
+                    jQuery("input[name=at_t_dtv_channelLineup_checkboxes]:checked")[0].id
+                ).nextSibling.nextSibling.outerText;
+
+                var at_t_dtv_tvSlider_SelectedValue = slider27.val();
+
+                var at_t_dtv_equipmentOptions_SelectedValue = document.getElementById(
+                    jQuery("input[name=at_t_dtv_EquipmentOptions_checkboxes]:checked")[0].id
+                ).nextSibling.nextSibling.outerText;
+
+                var at_t_dtv_premiumOptions_SelectedValue = [];
+                var at_t_dtv_arrayForPremiumOptions = [
+                    'Desportes: " $5.00"',
+                    'En_Espanol: "$15.00"',
+                    'Brazilian: " $30.00"',
+                    'Vietnamese: " $20.00"',
+                    'Korean: "$30.00"',
+                    'HBOMax: "$14.99"',
+                    'Cinemax: "$11.00"',
+                    'Epix: "$6.00"',
+                    'Showtime: "$11.00"',
+                    'Starz: "$11.00"',
+                    'Movies_Extra_pack: "$5.00"',
+                ];
+                for (
+                    let index = 0; index <
+                    document.getElementsByName("at_t_dtv_PremiumChannels_checkboxes").length; index++
+                ) {
+                    if (
+                        document.getElementsByName("at_t_dtv_PremiumChannels_checkboxes")[index]
+                        .checked == true
+                    ) {
+                        at_t_dtv_premiumOptions_SelectedValue.push(
+                            at_t_dtv_arrayForPremiumOptions[index]
+                        );
+                    }
                 }
-                // console.log("Mail Send! Successfully");
-                // $('#myExampleModal').modal('show');
+            }
+            var at_t_dtv_modemRental_SelectedValue = jQuery(
+                "input[name=at_t_dtv_modernRental]:checked"
+            ).val();
 
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log(XMLHttpRequest);
-                console.log("Status: " + textStatus);
-                console.log("Error: " + errorThrown);
-                console.log("ERROR");
-            },
-        });
-    }
+            var at_t_dtv_internetOptionsSlider_SelectedValue = slider28.val();
+
+            var at_t_dtv_installationOptions_SelectedValue = document.getElementById(
+                jQuery("input[name=at_t_dtv_InstallationOptions_checkboxes]:checked")[0].id
+            ).nextSibling.nextSibling.outerText;
 
 
-    function forInsertingDataInEmail_Data_Table() {
-        $.ajax({
-            url: "./model/addDataInEmailTable.php",
-            type: "POST",
-            data: {
-                userName: UsernameOfCustomer,
-                summarymessage: summaryMessage,
-                inputsmessage: inputsMessage,
-            },
-            success: function(data) {
-                debugger;
-                console.log("Data Submitted Successfully");
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log(XMLHttpRequest);
-                console.log("Status: " + textStatus);
-                console.log("Error: " + errorThrown);
-                console.log("ERROR");
-            },
-        });
 
-    }
+            inputsMessage = "<h1 style='text-align:center;'>COMCAST</h1>";
+            inputsMessage += "<br><h3>AT&T_DTV TV Options</h3>";
+            inputsMessage +=
+                "Channel Lineup = " + at_t_dtv_channelLineup_SelectedValue;
+            inputsMessage += "<br> TV's = " + at_t_dtv_tvSlider_SelectedValue;
+            inputsMessage +=
+                "<br>Equipment Options = " + at_t_dtv_equipmentOptions_SelectedValue;
+            for (
+                let index = 0; index < at_t_dtv_premiumOptions_SelectedValue.length; index++
+            ) {
+                if (index == 0) {
+                    inputsMessage +=
+                        "<br>Premium Options = " + at_t_dtv_premiumOptions_SelectedValue[index];
+                } else {
+                    inputsMessage += "<br>" + at_t_dtv_premiumOptions_SelectedValue[index];
+                }
+            }
+            inputsMessage += "<br><h3>AT&T_DTV Internet Options</h3>";
+            inputsMessage +=
+                "Modem Rental = " + at_t_dtv_modemRental_SelectedValue;
+            inputsMessage +=
+                "<br>AT&T_DTV Internet Slider = " +
+                at_t_dtv_internetOptionsSlider_SelectedValue;
+            inputsMessage +=
+                "<br>Installation Options = " +
+                at_t_dtv_installationOptions_SelectedValue;
 
 
-    function setLabelsByDefaultsFromData() {
-        // AT & T
-        $('label[for="entertainment"]')[0].innerHTML = "Entertainment (" + at_t_TV_Packages[0] + ")"
-        $('label[for="choice"]')[0].innerHTML = "Choice (" + at_t_TV_Packages[1] + ")"
-        $('label[for="ultimate"]')[0].innerHTML = "Ultimate (" + at_t_TV_Packages[2] + ")"
-        $('label[for="Premier"]')[0].innerHTML = "Premier (" + at_t_TV_Packages[3] + ")"
-        // COMCAST
-        $('label[for="basic"]')[0].innerHTML = "Basic (" + comcast_TV_Packages[0] + ")"
-        $('label[for="extra"]')[0].innerHTML = "Extra (" + comcast_TV_Packages[1] + ")"
-        $('label[for="preferred"]')[0].innerHTML = "Preferred (" + comcast_TV_Packages[2] + ")"
-        // SPECTRUM
-        $('label[for="tv_select"]')[0].innerHTML = "Tv Select (" + spectrum_TV_Packages[0] + ")"
-        $('label[for="tv_silver"]')[0].innerHTML = "Tv Silver (" + spectrum_TV_Packages[1] + ")"
-        $('label[for="tv_gold"]')[0].innerHTML = "Tv Gold (" + spectrum_TV_Packages[2] + ")"
-        // METRONET
-        $('label[for="basicTV"]')[0].innerHTML = "Basic TV (" + metronet_TV_Packages[0] + ")"
-        $('label[for="standardTV"]')[0].innerHTML = "Standard TV (" + metronet_TV_Packages[1] + ")"
-        $('label[for="preferredTV"]')[0].innerHTML = "Preferred TV (" + metronet_TV_Packages[2] + ")"
-        // DIRECTV
-        $('label[for="directv_PreferredChoice"]')[0].innerHTML = "Preferred Choice (" + directv_TV_Packages[0] +
-            ")"
-        $('label[for="directv_Entertainment"]')[0].innerHTML = "Entertainment (" + directv_TV_Packages[1] + ")"
-        $('label[for="directv_Choice"]')[0].innerHTML = "Choice (" + directv_TV_Packages[2] + ")"
-        $('label[for="directv_Ultimate"]')[0].innerHTML = "Ultimate (" + directv_TV_Packages[3] + ")"
-        $('label[for="directv_Premier"]')[0].innerHTML = "Premier (" + directv_TV_Packages[4] + ")"
-        // I3 BROADBAND
-        $('label[for="i3_Broadband_mustView_TV"]')[0].innerHTML = "MustView TV (" + i3_Broadband_TV_Packages[0] + ")"
-        $('label[for="i3_Broadband_maxView_TV"]')[0].innerHTML = "MaxView TV (" + i3_Broadband_TV_Packages[1] + ")"
-        $('label[for="i3_Broadband_megaView_TV"]')[0].innerHTML = "MegaView TV (" + i3_Broadband_TV_Packages[2] + ")"
-        // WOW
-        $('label[for="wow_smallCable"]')[0].innerHTML = "Small Cable (" + wow_TV_Packages[0] + ")"
-        $('label[for="wow_mediumCable"]')[0].innerHTML = "Medium Cable (" + wow_TV_Packages[1] + ")"
-        $('label[for="wow_largeCable"]')[0].innerHTML = "Large Cable (" + wow_TV_Packages[2] + ")"
-        // MEDIACOM
-        $('label[for="mediacom_local_TV"]')[0].innerHTML = "Local TV (" + mediacom_TV_Packages[0] + ")"
-        $('label[for="mediacom_essential_TV"]')[0].innerHTML = "Essential TV (" + mediacom_TV_Packages[1] + ")"
-        $('label[for="mediacom_variety_TV"]')[0].innerHTML = "Variety TV (" + mediacom_TV_Packages[2] + ")"
-        // RCN
-        $('label[for="rcn_Basic_TV"]')[0].innerHTML = "Basic TV (" + rcn_TV_Packages[0] + ")"
-        $('label[for="rcn_Signature_TV"]')[0].innerHTML = "Signature TV (" + rcn_TV_Packages[1] + ")"
-    }
+            summaryMessage =
+                document.getElementsByClassName("summary-section")[1].innerHTML;
+            // ________________________________________________
+            // ___________________________________________________
+            let uniqueLinkGenerated = false;
+            if (uniqueLinkForSpecificUser != "") {
+                uniqueLinkGenerated = true;
+            } else {
+                uniqueLinkGenerated = false;
+            }
+            // ___________________________________________________
+            $.ajax({
+                url: "./php/submit_email.php",
+                type: "POST",
+                data: {
+                    userName: UsernameOfCustomer,
+                    uniqueLinkOfCustomer: uniqueLinkForSpecificUser,
+                    name: userData[0].name,
+                    email: userData[0].email,
+                    mailhost: userData[0].mail_host,
+                    mailport: userData[0].mail_port,
+                    mailencryption: userData[0].mail_encryption,
+                    mailauth: userData[0].mail_auth,
+                    mailfrom: userData[0].mail_from_address,
+                    mailusername: userData[0].mail_username,
+                    mailpassword: userData[0].mail_password,
+                    customeremail: document.getElementById("staticEmail").value,
+                    summarymessage: summaryMessage,
+                    inputsmessage: inputsMessage,
+                },
+                success: function(data) {
+                    debugger;
+                    if (uniqueLinkGenerated == true) {
+                        console.log("Mail Send! Successfully");
+                        $('#myExampleModal').modal('show');
+                        forInsertingDataInEmail_Data_Table()
+                    } else {
+                        console.log("Mail Send! Successfully");
+                        $('#myExampleModal2').modal('show');
+                    }
+                    // console.log("Mail Send! Successfully");
+                    // $('#myExampleModal').modal('show');
+
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(XMLHttpRequest);
+                    console.log("Status: " + textStatus);
+                    console.log("Error: " + errorThrown);
+                    console.log("ERROR");
+                },
+            });
+        }
+
+
+        function forInsertingDataInEmail_Data_Table() {
+            $.ajax({
+                url: "./model/addDataInEmailTable.php",
+                type: "POST",
+                data: {
+                    userName: UsernameOfCustomer,
+                    summarymessage: summaryMessage,
+                    inputsmessage: inputsMessage,
+                },
+                success: function(data) {
+                    debugger;
+                    console.log("Data Submitted Successfully");
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(XMLHttpRequest);
+                    console.log("Status: " + textStatus);
+                    console.log("Error: " + errorThrown);
+                    console.log("ERROR");
+                },
+            });
+
+        }
+
+
+        function setLabelsByDefaultsFromData() {
+            // AT & T
+            $('label[for="entertainment"]')[0].innerHTML = "Entertainment (" + at_t_TV_Packages[0] + ")"
+            $('label[for="choice"]')[0].innerHTML = "Choice (" + at_t_TV_Packages[1] + ")"
+            $('label[for="ultimate"]')[0].innerHTML = "Ultimate (" + at_t_TV_Packages[2] + ")"
+            $('label[for="Premier"]')[0].innerHTML = "Premier (" + at_t_TV_Packages[3] + ")"
+            // COMCAST
+            $('label[for="basic"]')[0].innerHTML = "Basic (" + comcast_TV_Packages[0] + ")"
+            $('label[for="extra"]')[0].innerHTML = "Extra (" + comcast_TV_Packages[1] + ")"
+            $('label[for="preferred"]')[0].innerHTML = "Preferred (" + comcast_TV_Packages[2] + ")"
+            // SPECTRUM
+            $('label[for="tv_select"]')[0].innerHTML = "Tv Select (" + spectrum_TV_Packages[0] + ")"
+            $('label[for="tv_silver"]')[0].innerHTML = "Tv Silver (" + spectrum_TV_Packages[1] + ")"
+            $('label[for="tv_gold"]')[0].innerHTML = "Tv Gold (" + spectrum_TV_Packages[2] + ")"
+            // METRONET
+            $('label[for="basicTV"]')[0].innerHTML = "Basic TV (" + metronet_TV_Packages[0] + ")"
+            $('label[for="standardTV"]')[0].innerHTML = "Standard TV (" + metronet_TV_Packages[1] + ")"
+            $('label[for="preferredTV"]')[0].innerHTML = "Preferred TV (" + metronet_TV_Packages[2] + ")"
+            // DIRECTV
+            $('label[for="directv_PreferredChoice"]')[0].innerHTML = "Preferred Choice (" + directv_TV_Packages[0] +
+                ")"
+            $('label[for="directv_Entertainment"]')[0].innerHTML = "Entertainment (" + directv_TV_Packages[1] + ")"
+            $('label[for="directv_Choice"]')[0].innerHTML = "Choice (" + directv_TV_Packages[2] + ")"
+            $('label[for="directv_Ultimate"]')[0].innerHTML = "Ultimate (" + directv_TV_Packages[3] + ")"
+            $('label[for="directv_Premier"]')[0].innerHTML = "Premier (" + directv_TV_Packages[4] + ")"
+            // I3 BROADBAND
+            $('label[for="i3_Broadband_mustView_TV"]')[0].innerHTML = "MustView TV (" + i3_Broadband_TV_Packages[0] +
+                ")"
+            $('label[for="i3_Broadband_maxView_TV"]')[0].innerHTML = "MaxView TV (" + i3_Broadband_TV_Packages[1] + ")"
+            $('label[for="i3_Broadband_megaView_TV"]')[0].innerHTML = "MegaView TV (" + i3_Broadband_TV_Packages[2] +
+                ")"
+            // WOW
+            $('label[for="wow_smallCable"]')[0].innerHTML = "Small Cable (" + wow_TV_Packages[0] + ")"
+            $('label[for="wow_mediumCable"]')[0].innerHTML = "Medium Cable (" + wow_TV_Packages[1] + ")"
+            $('label[for="wow_largeCable"]')[0].innerHTML = "Large Cable (" + wow_TV_Packages[2] + ")"
+            // MEDIACOM
+            $('label[for="mediacom_local_TV"]')[0].innerHTML = "Local TV (" + mediacom_TV_Packages[0] + ")"
+            $('label[for="mediacom_essential_TV"]')[0].innerHTML = "Essential TV (" + mediacom_TV_Packages[1] + ")"
+            $('label[for="mediacom_variety_TV"]')[0].innerHTML = "Variety TV (" + mediacom_TV_Packages[2] + ")"
+            // RCN
+            $('label[for="rcn_Basic_TV"]')[0].innerHTML = "Basic TV (" + rcn_TV_Packages[0] + ")"
+            $('label[for="rcn_Signature_TV"]')[0].innerHTML = "Signature TV (" + rcn_TV_Packages[1] + ")"
+        }
     </script>
 </body>
 

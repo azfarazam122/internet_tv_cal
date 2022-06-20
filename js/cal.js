@@ -5226,7 +5226,7 @@ function runOperation_Tab13() {
 
 	// 1st Row
 	var ifAllChannelLineups_Of_At_t_dtv = false;
-	for (let index = 0; index < 3; index++) {
+	for (let index = 0; index < 4; index++) {
 		let checkboxes_variable = document.getElementsByName(
 			"at_t_dtv_channelLineup_checkboxes"
 		);
@@ -5248,6 +5248,17 @@ function runOperation_Tab13() {
 				index++
 			) {
 				document.getElementsByName("at_t_dtv_EquipmentOptions_checkboxes")[
+					index
+				].disabled = true;
+			}
+
+			for (
+				let index = 0;
+				index <
+				document.getElementsByName("at_t_dtv_PremiumChannels_checkboxes").length;
+				index++
+			) {
+				document.getElementsByName("at_t_dtv_PremiumChannels_checkboxes")[
 					index
 				].disabled = true;
 			}
@@ -5277,7 +5288,7 @@ function runOperation_Tab13() {
 			$("#at_t_dtvTelevisionSummary").show();
 			// ----------------------
 			// Enabling Television Summary Properties
-			slider4.data("ionRangeSlider").update({ disable: false });
+			slider27.data("ionRangeSlider").update({ disable: false });
 			for (
 				let index = 0;
 				index <
@@ -5301,15 +5312,14 @@ function runOperation_Tab13() {
 			// ----------------------
 
 			let label = checkboxes_variable[index].nextElementSibling.innerText;
-			label = label.split(" ");
-			document.getElementById("at_t_dtv_ChannelLineup_Text").innerHTML = label[0];
+			document.getElementById("at_t_dtv_ChannelLineup_Text").innerHTML = label;
 		}
 	}
 
 	// 2nd Row
 
 	// ------
-	let tv_variable_2 = slider4.val();
+	let tv_variable_2 = slider27.val();
 	$("#tvbox_1_Text_At_t_dtv").hide();
 	$("#tvbox_2_Text_At_t_dtv").hide();
 	$("#tvbox_3_Text_At_t_dtv").hide();
@@ -5322,7 +5332,7 @@ function runOperation_Tab13() {
 			at_t_dtv_TV_s_Price.One;
 	}
 
-	// 4th Row
+	// Equipment Options
 	for (let index = 0; index < 2; index++) {
 		let checkboxes_variable_2 = document.getElementsByName(
 			"at_t_dtv_EquipmentOptions_checkboxes"
@@ -5334,26 +5344,23 @@ function runOperation_Tab13() {
 			if (index == 0) {
 				document.getElementById("at_t_dtv_equipment_Price").innerHTML =
 					at_t_dtv_EquipmentOptions.Twenty_Hour_DVR;
-			} else if (index == 1) {
-				document.getElementById("at_t_dtv_equipment_Price").innerHTML =
-					at_t_dtv_EquipmentOptions.OneFifty_Hour_DVR;
 			} else {
 				document.getElementById("at_t_dtv_equipment_Price").innerHTML =
-					at_t_dtv_EquipmentOptions.ThreeHundred_Hour_DVR;
+					at_t_dtv_EquipmentOptions.Unlimited_DVR;
 			}
 		}
 	}
 
-	// 5th Row
+	// Premium Options
 	// -----------------------------------------------------------------------------------
-	// 5th Row
+	// Premium Options
 	let checkboxes_variable = document.getElementsByName(
 		"at_t_dtv_PremiumChannels_checkboxes"
 	);
 	if (checkboxes_variable[0].checked == true) {
 		$("#premiumText_1_At_t_dtv").show();
 		document.getElementById("at_t_dtv_1_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.HBO;
+			at_t_dtv_PremiumChannels.Desportes;
 	} else {
 		$("#premiumText_1_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_1_premium_Price").innerHTML = "";
@@ -5362,7 +5369,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[1].checked == true) {
 		$("#premiumText_2_At_t_dtv").show();
 		document.getElementById("at_t_dtv_2_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.Cinemax;
+			at_t_dtv_PremiumChannels.En_Espanol;
 	} else {
 		$("#premiumText_2_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_2_premium_Price").innerHTML = "";
@@ -5371,7 +5378,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[2].checked == true) {
 		$("#premiumText_3_At_t_dtv").show();
 		document.getElementById("at_t_dtv_3_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.Showtime;
+			at_t_dtv_PremiumChannels.Brazilian;
 	} else {
 		$("#premiumText_3_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_3_premium_Price").innerHTML = "";
@@ -5380,7 +5387,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[3].checked == true) {
 		$("#premiumText_4_At_t_dtv").show();
 		document.getElementById("at_t_dtv_4_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.Starz;
+			at_t_dtv_PremiumChannels.Vietnamese;
 	} else {
 		$("#premiumText_4_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_4_premium_Price").innerHTML = "";
@@ -5389,7 +5396,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[4].checked == true) {
 		$("#premiumText_5_At_t_dtv").show();
 		document.getElementById("at_t_dtv_5_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.Sports_Package;
+			at_t_dtv_PremiumChannels.Korean;
 	} else {
 		$("#premiumText_5_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_5_premium_Price").innerHTML = "";
@@ -5398,7 +5405,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[5].checked == true) {
 		$("#premiumText_6_At_t_dtv").show();
 		document.getElementById("at_t_dtv_6_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.TMC;
+			at_t_dtv_PremiumChannels.HBOMax;
 	} else {
 		$("#premiumText_6_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_6_premium_Price").innerHTML = "";
@@ -5407,7 +5414,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[6].checked == true) {
 		$("#premiumText_7_At_t_dtv").show();
 		document.getElementById("at_t_dtv_7_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.TMC;
+			at_t_dtv_PremiumChannels.Cinemax;
 	} else {
 		$("#premiumText_7_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_7_premium_Price").innerHTML = "";
@@ -5416,7 +5423,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[7].checked == true) {
 		$("#premiumText_8_At_t_dtv").show();
 		document.getElementById("at_t_dtv_8_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.TMC;
+			at_t_dtv_PremiumChannels.Epix;
 	} else {
 		$("#premiumText_8_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_8_premium_Price").innerHTML = "";
@@ -5425,7 +5432,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[8].checked == true) {
 		$("#premiumText_9_At_t_dtv").show();
 		document.getElementById("at_t_dtv_9_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.TMC;
+			at_t_dtv_PremiumChannels.Showtime;
 	} else {
 		$("#premiumText_9_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_9_premium_Price").innerHTML = "";
@@ -5434,7 +5441,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[9].checked == true) {
 		$("#premiumText_10_At_t_dtv").show();
 		document.getElementById("at_t_dtv_10_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.TMC;
+			at_t_dtv_PremiumChannels.Starz;
 	} else {
 		$("#premiumText_10_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_10_premium_Price").innerHTML = "";
@@ -5443,7 +5450,7 @@ function runOperation_Tab13() {
 	if (checkboxes_variable[10].checked == true) {
 		$("#premiumText_11_At_t_dtv").show();
 		document.getElementById("at_t_dtv_11_premium_Price").innerHTML =
-			at_t_dtv_PremiumChannels.TMC;
+			at_t_dtv_PremiumChannels.Movies_Extra_pack;
 	} else {
 		$("#premiumText_11_At_t_dtv").hide();
 		document.getElementById("at_t_dtv_11_premium_Price").innerHTML = "";
@@ -5452,32 +5459,32 @@ function runOperation_Tab13() {
 	// -----------------------------------------------------------------------------------
 
 	// 6th Row
-	let total_3 = 0;
+	let totalOfTelevisionSummary = 0;
 
 	for (let index = 1; index <= 11; index++) {
 		if (
 			document.getElementById("at_t_dtv_" + index + "_premium_Price").innerHTML !=
 			""
 		) {
-			total_3 += numeral(
+			totalOfTelevisionSummary += numeral(
 				document.getElementById("at_t_dtv_" + index + "_premium_Price").innerHTML
 			).value();
 		}
 	}
-	total_3 +=
+	totalOfTelevisionSummary +=
 		numeral(slider4.val()).value() * numeral(at_t_dtv_TV_s_Price.One).value();
 	if (
 		numeral(
 			document.getElementById("at_t_dtv_equipment_Price").innerHTML
 		).value() != null
 	) {
-		total_3 += numeral(
+		totalOfTelevisionSummary += numeral(
 			document.getElementById("at_t_dtv_equipment_Price").innerHTML
 		).value();
 	}
 
 	document.getElementById("at_t_dtv_TotalTelevision_Price").innerHTML =
-		"$" + total_3.toLocaleString() + "/month + taxes and fees";
+		"$" + totalOfTelevisionSummary.toLocaleString() + "/month + taxes and fees";
 
 	// -------------------------------------------------------------
 	// TABLE 2
@@ -5504,18 +5511,18 @@ function runOperation_Tab13() {
 		chooseBundlePrice = at_t_dtv_BundlePrice_No_TV;
 	}
 
-	if (slider5.val() == "0mbps") {
+	if (slider28.val() == "0mbps") {
 		document.getElementById("at_t_dtv_bundle_Price").innerHTML =
 			chooseBundlePrice.I_0_Mbps;
-	} else if (slider5.val() == "300mbps") {
-		document.getElementById("at_t_dtv_bundle_Price").innerHTML =
-			chooseBundlePrice.I_50_Mbps;
-	} else if (slider5.val() == "500mbps") {
-		document.getElementById("at_t_dtv_bundle_Price").innerHTML =
-			chooseBundlePrice.I_100_Mbps;
-	} else if (slider5.val() == "1000mbps") {
+	} else if (slider28.val() == "300mbps") {
 		document.getElementById("at_t_dtv_bundle_Price").innerHTML =
 			chooseBundlePrice.I_300_Mbps;
+	} else if (slider28.val() == "500mbps") {
+		document.getElementById("at_t_dtv_bundle_Price").innerHTML =
+			chooseBundlePrice.I_500_Mbps;
+	} else if (slider28.val() == "1000mbps") {
+		document.getElementById("at_t_dtv_bundle_Price").innerHTML =
+			chooseBundlePrice.I_1000_Mbps;
 	}
 
 	// 2nd Row
@@ -5547,10 +5554,10 @@ function runOperation_Tab13() {
 			.checked
 	) {
 		document.getElementById("at_t_dtv_activationFee_Price").innerHTML =
-			at_t_dtv_InstallationFee.SelfInstall;
+			at_t_dtv_InstallationFee.Fiber;
 	} else {
 		document.getElementById("at_t_dtv_activationFee_Price").innerHTML =
-			at_t_dtv_InstallationFee.TechInstall;
+			at_t_dtv_InstallationFee.NonFiber;
 	}
 
 	// PROMOTIONS AND UPDATE SECTION
@@ -5672,7 +5679,6 @@ function runOperation_Tab13() {
 
 	// at_t_dtv Bundle Discount Calculation
 	var sliderValue = slider28.val();
-
 	let totalOfAt_t_dtv = numeral(
 		document.getElementById("at_t_dtv_TotalInternet_Price").innerHTML
 	).value();
@@ -5696,7 +5702,7 @@ function runOperation_Tab13() {
 			}) +
 			"/month + Taxes and Fees";
 	} else {
-		document.getElementById("comcast_TotalOfAll_Price").innerHTML =
+		document.getElementById("at_t_dtv_TotalOfAll_Price").innerHTML =
 			"$" +
 			totalOfAt_t_dtv.toLocaleString(undefined, {
 				minimumFractionDigits: 2,
@@ -5744,11 +5750,15 @@ function displayPremierFeatures() {
 // _________________________________________________________________________
 
 $(document).ready(function () {
+	debugger;
 	$(".channelLineUp-At-t").click(function () {
 		$(".channelLineUp-At-t").not(this).prop("checked", false);
 	});
 	$(".channelLineup-comcast").click(function () {
 		$(".channelLineup-comcast").not(this).prop("checked", false);
+	});
+	$(".channelLineup-at_t_dtv").click(function () {
+		$(".channelLineup-at_t_dtv").not(this).prop("checked", false);
 	});
 });
 
