@@ -1,39 +1,37 @@
 /** @format */
 
 var at_t_dtv_TV_Packages = [
-	(Choice = "Choice $20/month"),
-	(Popular = "Popular $60/month"),
+	(Entertainment = "Choice $20/month"),
+	(Choice = "Popular $60/month"),
 	(Ultimate = "Ultimate $80/month"),
+	(Premier = "Ultimate $80/month"),
 ];
 
 var at_t_dtv_PremiumChannels = {
-	HBO: "$15.00",
-	Showtime: "$12",
-	Sports_Package: "$9.95",
-	Starz: "$8.99",
-	Cinemax: "$12",
-	TMC: "$12",
-	Latino_Package: "$10.00",
-	More_Sports_Entertainment: "$9.95",
-	Desports: "$5.00",
-	Epix: "$5.99",
-	The_Movie_Channel: "$12",
-	Hitz: "$12",
+	Desportes: " $5.00",
+	En_Espanol: "$15.00",
+	Brazilian: " $30.00",
+	Vietnamese: " $20.00",
+	Korean: "$30.00",
+	HBOMax: "$14.99",
+	Cinemax: "$11.00",
+	Epix: "$6.00",
+	Showtime: "$11.00",
+	Starz: "$11.00",
+	Movies_Extra_pack: "$5.00",
 };
 
 var at_t_dtv_EquipmentOptions = {
-	Twenty_Hour_DVR: "$0/month",
-	OneFifty_Hour_DVR: "$10/month",
-	ThreeHundred_Hour_DVR: "$20/month",
+	Twenty_Hour_DVR: "Free",
+	Unlimited_DVR: "$10/month",
 };
 
 var at_t_dtv_TV_s_Price = {
-	One: "$7.50/month",
+	One: "$5.00/month",
 };
 
 var at_t_dtv_ModemRental = {
-	Modem_And_Router: "$14/month",
-	Whole_Home_Modem_And_Router: "$25/month",
+	Modem_And_Router: "$10/month",
 };
 
 var at_t_dtv_InternetOnly = {
@@ -47,56 +45,40 @@ var at_t_dtv_InternetOnly = {
 };
 
 var at_t_dtv_InstallationFee = {
-	SelfInstall: "$0",
-	TechInstall: "$100",
-};
-
-var at_t_dtv_AutopayDiscount = {
-	Yes: "$10/month",
-	No: "$0/month",
-};
-
-var at_t_dtv_AddPhone = {
-	Yes: "$10/month",
-	No: "$0/month",
+	Fiber: "Free",
+	NonFiber: "$99",
 };
 
 var at_t_dtv_BundlePrice_No_TV = {
 	I_0_Mbps: "$0/month",
-	I_50_Mbps: "$35/month",
-	I_100_Mbps: "$40/month",
-	I_300_Mbps: "$50/month",
-	I_600_Mbps: "$65/month",
-	I_900_Mbps: "$70/month",
-	I_1200_Mbps: "$80/month",
+	I_300_Mbps: "$55/month",
+	I_500_Mbps: "$65/month",
+	I_1000_Mbps: "$80/month",
 };
 
-var at_t_dtv_BundlePrice_Basic_TV = {
-	I_0_Mbps: "$20/month",
-	I_50_Mbps: "$35/month",
-	I_100_Mbps: "$50/month",
-	I_300_Mbps: "$60/month",
-	I_600_Mbps: "$75/month",
-	I_900_Mbps: "$80/month",
-	I_1200_Mbps: "$90/month",
+var at_t_dtv_BundlePrice_Entertainment_TV = {
+	I_0_Mbps: "$69.99/month",
+	I_300_Mbps: "$124.99/month",
+	I_500_Mbps: "$134.99/month",
+	I_1000_Mbps: "$149.90/month",
 };
-var at_t_dtv_BundlePrice_Extra_TV = {
-	I_0_Mbps: "$60/month",
-	I_50_Mbps: "$70/month",
-	I_100_Mbps: "$90/month",
-	I_300_Mbps: "$100/month",
-	I_600_Mbps: "$115/month",
-	I_900_Mbps: "$120/month",
-	I_1200_Mbps: "$130/month",
+var at_t_dtv_BundlePrice_Choice_TV = {
+	I_0_Mbps: "$89.99/month",
+	I_300_Mbps: "$144.99/month",
+	I_500_Mbps: "$154.99/month",
+	I_1000_Mbps: "$169.99/month",
 };
-var at_t_dtv_BundlePrice_Preferred_TV = {
-	I_0_Mbps: "$80/month",
-	I_50_Mbps: "$90/month",
-	I_100_Mbps: "$110/month",
-	I_300_Mbps: "$120/month",
-	I_600_Mbps: "$135/month",
-	I_900_Mbps: "$140/month",
-	I_1200_Mbps: "$150/month",
+var at_t_dtv_BundlePrice_Ultimate_TV = {
+	I_0_Mbps: "$104.99/month",
+	I_300_Mbps: "$159.99/month",
+	I_500_Mbps: "$169.99/month",
+	I_1000_Mbps: "$184.99/month",
+};
+var at_t_dtv_BundlePrice_Premier_TV = {
+	I_0_Mbps: "$149.99/month",
+	I_300_Mbps: "$204.99/month",
+	I_500_Mbps: "$214.99/month",
+	I_1000_Mbps: "$229.99/month",
 };
 
 var at_t_dtv_Promotions = [(One = "• No current promotions")];

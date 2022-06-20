@@ -732,8 +732,8 @@ function runOperation_Tab1() {
 			.find("#At_t_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_TopSellingPoints[index] +
-					"</td></tr>"
+				at_t_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -751,8 +751,8 @@ function runOperation_Tab1() {
 			.find("#At_t_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				at_t_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -769,8 +769,8 @@ function runOperation_Tab1() {
 			.find("#At_t_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				at_t_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -787,8 +787,8 @@ function runOperation_Tab1() {
 			.find("#At_t_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				at_t_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -805,8 +805,8 @@ function runOperation_Tab1() {
 			.find("#At_t_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_InstallationOptions[index] +
-					"</td></tr>"
+				at_t_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -1212,8 +1212,8 @@ function runOperation_Tab2() {
 			.find("#comcast_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					comcast_Promotions[index] +
-					"</td></tr>"
+				comcast_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById("comcast_UpdateSectionBody");
@@ -1239,8 +1239,8 @@ function runOperation_Tab2() {
 			.find("#comcast_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					comcast_TopSellingPoints[index] +
-					"</td></tr>"
+				comcast_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -1258,8 +1258,8 @@ function runOperation_Tab2() {
 			.find("#comcast_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					comcast_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				comcast_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -1276,8 +1276,8 @@ function runOperation_Tab2() {
 			.find("#comcast_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					comcast_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				comcast_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -1294,8 +1294,8 @@ function runOperation_Tab2() {
 			.find("#comcast_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					comcast_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				comcast_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -1312,8 +1312,8 @@ function runOperation_Tab2() {
 			.find("#comcast_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					comcast_InstallationOptions[index] +
-					"</td></tr>"
+				comcast_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -1825,8 +1825,8 @@ function runOperation_Tab3() {
 			.find("#spectrum_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					spectrum_Promotions[index] +
-					"</td></tr>"
+				spectrum_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById("spectrum_UpdateSectionBody");
@@ -1852,8 +1852,8 @@ function runOperation_Tab3() {
 			.find("#spectrum_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					spectrum_TopSellingPoints[index] +
-					"</td></tr>"
+				spectrum_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -1871,8 +1871,8 @@ function runOperation_Tab3() {
 			.find("#spectrum_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					spectrum_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				spectrum_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -1889,8 +1889,8 @@ function runOperation_Tab3() {
 			.find("#spectrum_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					spectrum_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				spectrum_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -1907,8 +1907,8 @@ function runOperation_Tab3() {
 			.find("#spectrum_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					spectrum_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				spectrum_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -1925,8 +1925,8 @@ function runOperation_Tab3() {
 			.find("#spectrum_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					spectrum_InstallationOptions[index] +
-					"</td></tr>"
+				spectrum_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2268,8 +2268,8 @@ function runOperation_Tab4() {
 			.find("#metronet_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					metronet_Promotions[index] +
-					"</td></tr>"
+				metronet_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById("metronet_UpdateSectionBody");
@@ -2295,8 +2295,8 @@ function runOperation_Tab4() {
 			.find("#metronet_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					metronet_TopSellingPoints[index] +
-					"</td></tr>"
+				metronet_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2314,8 +2314,8 @@ function runOperation_Tab4() {
 			.find("#metronet_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					metronet_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				metronet_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -2332,8 +2332,8 @@ function runOperation_Tab4() {
 			.find("#metronet_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					metronet_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				metronet_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -2350,8 +2350,8 @@ function runOperation_Tab4() {
 			.find("#metronet_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					metronet_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				metronet_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2368,8 +2368,8 @@ function runOperation_Tab4() {
 			.find("#metronet_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					metronet_InstallationOptions[index] +
-					"</td></tr>"
+				metronet_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2385,7 +2385,7 @@ function runOperation_Tab4() {
 			} else {
 				document.getElementById("metronet_discount_Price").innerHTML =
 					metronet_BundleDiscount_Basic_TV[
-						"B_" + numeral(sliderValue).value().toLocaleString() + "mbps"
+					"B_" + numeral(sliderValue).value().toLocaleString() + "mbps"
 					];
 			}
 		} else if (
@@ -2397,7 +2397,7 @@ function runOperation_Tab4() {
 			} else {
 				document.getElementById("metronet_discount_Price").innerHTML =
 					metronet_BundleDiscount_Extra_TV[
-						"E_" + numeral(sliderValue).value().toLocaleString() + "mbps"
+					"E_" + numeral(sliderValue).value().toLocaleString() + "mbps"
 					];
 			}
 		} else if (
@@ -2409,7 +2409,7 @@ function runOperation_Tab4() {
 			} else {
 				document.getElementById("metronet_discount_Price").innerHTML =
 					metronet_BundleDiscount_Preferred_TV[
-						"P_" + numeral(sliderValue).value().toLocaleString() + "mbps"
+					"P_" + numeral(sliderValue).value().toLocaleString() + "mbps"
 					];
 			}
 		}
@@ -2540,8 +2540,8 @@ function runOperation_Tab5() {
 			.find("#frontier_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					frontier_Promotions[index] +
-					"</td></tr>"
+				frontier_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById("frontier_UpdateSectionBody");
@@ -2567,8 +2567,8 @@ function runOperation_Tab5() {
 			.find("#frontier_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					frontier_TopSellingPoints[index] +
-					"</td></tr>"
+				frontier_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2586,8 +2586,8 @@ function runOperation_Tab5() {
 			.find("#frontier_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					frontier_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				frontier_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -2604,8 +2604,8 @@ function runOperation_Tab5() {
 			.find("#frontier_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					frontier_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				frontier_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -2622,8 +2622,8 @@ function runOperation_Tab5() {
 			.find("#frontier_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					frontier_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				frontier_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2640,8 +2640,8 @@ function runOperation_Tab5() {
 			.find("#frontier_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					frontier_InstallationOptions[index] +
-					"</td></tr>"
+				frontier_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2916,8 +2916,8 @@ function runOperation_Tab6() {
 			.find("#directv_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					directv_Promotions[index] +
-					"</td></tr>"
+				directv_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById("directv_UpdateSectionBody");
@@ -2943,8 +2943,8 @@ function runOperation_Tab6() {
 			.find("#directv_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					directv_TopSellingPoints[index] +
-					"</td></tr>"
+				directv_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -2962,8 +2962,8 @@ function runOperation_Tab6() {
 			.find("#directv_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					directv_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				directv_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -2980,8 +2980,8 @@ function runOperation_Tab6() {
 			.find("#directv_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					directv_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				directv_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -2998,8 +2998,8 @@ function runOperation_Tab6() {
 			.find("#directv_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					directv_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				directv_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3016,8 +3016,8 @@ function runOperation_Tab6() {
 			.find("#directv_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					directv_InstallationOptions[index] +
-					"</td></tr>"
+				directv_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3342,8 +3342,8 @@ function runOperation_Tab7() {
 			.find("#i3_Broadband_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					i3_Broadband_Promotions[index] +
-					"</td></tr>"
+				i3_Broadband_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById(
@@ -3355,8 +3355,8 @@ function runOperation_Tab7() {
 			.find("#i3_Broadband_UpdateSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					i3_Broadband_Updates[index] +
-					"</td></tr>"
+				i3_Broadband_Updates[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3373,8 +3373,8 @@ function runOperation_Tab7() {
 			.find("#i3_Broadband_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					i3_Broadband_TopSellingPoints[index] +
-					"</td></tr>"
+				i3_Broadband_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3392,8 +3392,8 @@ function runOperation_Tab7() {
 			.find("#i3_Broadband_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					i3_Broadband_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				i3_Broadband_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -3410,8 +3410,8 @@ function runOperation_Tab7() {
 			.find("#i3_Broadband_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					i3_Broadband_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				i3_Broadband_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -3428,8 +3428,8 @@ function runOperation_Tab7() {
 			.find("#i3_Broadband_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					i3_Broadband_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				i3_Broadband_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3446,8 +3446,8 @@ function runOperation_Tab7() {
 			.find("#i3_Broadband_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					i3_Broadband_InstallationOptions[index] +
-					"</td></tr>"
+				i3_Broadband_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3765,8 +3765,8 @@ function runOperation_Tab8() {
 			.find("#wow_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					wow_TopSellingPoints[index] +
-					"</td></tr>"
+				wow_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3784,8 +3784,8 @@ function runOperation_Tab8() {
 			.find("#wow_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					wow_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				wow_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -3802,8 +3802,8 @@ function runOperation_Tab8() {
 			.find("#wow_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					wow_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				wow_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -3816,8 +3816,8 @@ function runOperation_Tab8() {
 			.find("#wow_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					wow_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				wow_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -3834,8 +3834,8 @@ function runOperation_Tab8() {
 			.find("#wow_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					wow_InstallationOptions[index] +
-					"</td></tr>"
+				wow_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4218,8 +4218,8 @@ function runOperation_Tab9() {
 			.find("#mediacom_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					mediacom_Promotions[index] +
-					"</td></tr>"
+				mediacom_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById("mediacom_UpdateSectionBody");
@@ -4245,8 +4245,8 @@ function runOperation_Tab9() {
 			.find("#mediacom_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					mediacom_TopSellingPoints[index] +
-					"</td></tr>"
+				mediacom_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4264,8 +4264,8 @@ function runOperation_Tab9() {
 			.find("#mediacom_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					mediacom_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				mediacom_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -4282,8 +4282,8 @@ function runOperation_Tab9() {
 			.find("#mediacom_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					mediacom_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				mediacom_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -4300,8 +4300,8 @@ function runOperation_Tab9() {
 			.find("#mediacom_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					mediacom_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				mediacom_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4318,8 +4318,8 @@ function runOperation_Tab9() {
 			.find("#mediacom_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					mediacom_InstallationOptions[index] +
-					"</td></tr>"
+				mediacom_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 	// I3_BROADBAND Bundle Discount Calculation
@@ -4471,8 +4471,8 @@ function runOperation_Tab10() {
 			.find("#hughes_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					hughes_InstallationOptions[index] +
-					"</td></tr>"
+				hughes_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4489,8 +4489,8 @@ function runOperation_Tab10() {
 			.find("#hughes_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					hughes_TopSellingPoints[index] +
-					"</td></tr>"
+				hughes_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4508,8 +4508,8 @@ function runOperation_Tab10() {
 			.find("#hughes_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					hughes_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				hughes_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -4526,8 +4526,8 @@ function runOperation_Tab10() {
 			.find("#hughes_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					hughes_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				hughes_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -4544,8 +4544,8 @@ function runOperation_Tab10() {
 			.find("#hughes_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					hughes_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				hughes_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4682,8 +4682,8 @@ function runOperation_Tab11() {
 			.find("#century_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					century_InstallationOptions[index] +
-					"</td></tr>"
+				century_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4700,8 +4700,8 @@ function runOperation_Tab11() {
 			.find("#century_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					century_TopSellingPoints[index] +
-					"</td></tr>"
+				century_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -4719,8 +4719,8 @@ function runOperation_Tab11() {
 			.find("#century_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					century_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				century_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -4737,8 +4737,8 @@ function runOperation_Tab11() {
 			.find("#century_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					century_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				century_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -4755,8 +4755,8 @@ function runOperation_Tab11() {
 			.find("#century_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					century_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				century_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -5066,8 +5066,8 @@ function runOperation_Tab12() {
 			.find("#rcn_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					rcn_TopSellingPoints[index] +
-					"</td></tr>"
+				rcn_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -5085,8 +5085,8 @@ function runOperation_Tab12() {
 			.find("#rcn_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					rcn_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				rcn_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -5103,8 +5103,8 @@ function runOperation_Tab12() {
 			.find("#rcn_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					rcn_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				rcn_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -5117,8 +5117,8 @@ function runOperation_Tab12() {
 			.find("#rcn_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					rcn_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				rcn_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -5135,8 +5135,8 @@ function runOperation_Tab12() {
 			.find("#rcn_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					rcn_InstallationOptions[index] +
-					"</td></tr>"
+				rcn_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -5218,7 +5218,7 @@ function runOperation_Tab12() {
 }
 
 // _________________________________________________________________________
-// COMCAST
+// AT&T_DTV
 runOperation_Tab13();
 function runOperation_Tab13() {
 	// -------------------------------------------------------------
@@ -5253,8 +5253,6 @@ function runOperation_Tab13() {
 			}
 			// ----------------------
 
-			// document.getElementById("comcast_ChannelLineup_Price").innerHTML =
-			// 	"$0/month";
 			document.getElementById("at_t_dtv_tvbox_1_Price").innerHTML = "$0/month";
 			document.getElementById("at_t_dtv_tvbox_2_Price").innerHTML = "$0/month";
 			document.getElementById("at_t_dtv_tvbox_3_Price").innerHTML = "$0/month";
@@ -5489,19 +5487,19 @@ function runOperation_Tab13() {
 	if (
 		document.getElementsByName("at_t_dtv_channelLineup_checkboxes")[0].checked
 	) {
-		chooseBundlePrice = at_t_dtv_BundlePrice_Basic_TV;
+		chooseBundlePrice = at_t_dtv_BundlePrice_Entertainment_TV;
 	} else if (
 		document.getElementsByName("at_t_dtv_channelLineup_checkboxes")[1].checked
 	) {
-		chooseBundlePrice = at_t_dtv_BundlePrice_Extra_TV;
+		chooseBundlePrice = at_t_dtv_BundlePrice_Choice_TV;
 	} else if (
 		document.getElementsByName("at_t_dtv_channelLineup_checkboxes")[2].checked
 	) {
-		chooseBundlePrice = at_t_dtv_BundlePrice_Preferred_TV;
+		chooseBundlePrice = at_t_dtv_BundlePrice_Ultimate_TV;
 	} else if (
 		document.getElementsByName("at_t_dtv_channelLineup_checkboxes")[3].checked
 	) {
-		chooseBundlePrice = at_t_dtv_BundlePrice_Preferred_TV;
+		chooseBundlePrice = at_t_dtv_BundlePrice_Premier_TV;
 	} else {
 		chooseBundlePrice = at_t_dtv_BundlePrice_No_TV;
 	}
@@ -5565,8 +5563,8 @@ function runOperation_Tab13() {
 			.find("#at_t_dtv_PromotionSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_dtv_Promotions[index] +
-					"</td></tr>"
+				at_t_dtv_Promotions[index] +
+				"</td></tr>"
 			);
 	}
 	let tableUpdateBody = document.getElementById("at_t_dtv_UpdateSectionBody");
@@ -5592,8 +5590,8 @@ function runOperation_Tab13() {
 			.find("#at_t_dtv_TopSellingPointsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_dtv_TopSellingPoints[index] +
-					"</td></tr>"
+				at_t_dtv_TopSellingPoints[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -5611,8 +5609,8 @@ function runOperation_Tab13() {
 			.find("#at_t_dtv_RequiredNewServiceInfoSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_dtv_RequiredNewServiceInformation[index] +
-					"</td></tr>"
+				at_t_dtv_RequiredNewServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// REQUIRED DISCONNECTION INFORMATION
@@ -5629,8 +5627,8 @@ function runOperation_Tab13() {
 			.find("#at_t_dtv_RequiredDisconnectionInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_dtv_RequiredDisconnectionInformation[index] +
-					"</td></tr>"
+				at_t_dtv_RequiredDisconnectionInformation[index] +
+				"</td></tr>"
 			);
 	}
 	// ADDITIONAL SERVICE INFORMATION
@@ -5647,8 +5645,8 @@ function runOperation_Tab13() {
 			.find("#at_t_dtv_AdditionalServiceInformationSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_dtv_AdditionalServiceInformation[index] +
-					"</td></tr>"
+				at_t_dtv_AdditionalServiceInformation[index] +
+				"</td></tr>"
 			);
 	}
 
@@ -5665,14 +5663,14 @@ function runOperation_Tab13() {
 			.find("#at_t_dtv_InstallationOptionsSectionBody")
 			.append(
 				'<tr><td style="text-align: left">' +
-					at_t_dtv_InstallationOptions[index] +
-					"</td></tr>"
+				at_t_dtv_InstallationOptions[index] +
+				"</td></tr>"
 			);
 	}
 
 	// Grand Total Row
 
-	// Comcast Bundle Discount Calculation
+	// at_t_dtv Bundle Discount Calculation
 	var sliderValue = slider28.val();
 
 	let totalOfAt_t_dtv = numeral(

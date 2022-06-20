@@ -4568,7 +4568,7 @@ if (isset($_SESSION['username'])) {
                 </div>
 
                 <!-- ____________________________________________________________________________ -->
-                <!-- COMCAST -->
+                <!-- AT&T_DTV Stream -->
                 <div id="tabDetails_13">
                     <h1 class="section-heading-main"> AT&T_DTV Stream</h1>
                     <div class="row register-form">
@@ -6146,7 +6146,7 @@ if (isset($_SESSION['username'])) {
         $('label[for="tv_select"]')[0].innerHTML = "Tv Select (" + spectrum_TV_Packages[0] + ")"
         $('label[for="tv_silver"]')[0].innerHTML = "Tv Silver (" + spectrum_TV_Packages[1] + ")"
         $('label[for="tv_gold"]')[0].innerHTML = "Tv Gold (" + spectrum_TV_Packages[2] + ")"
-        // METRONET 
+        // METRONET
         $('label[for="basicTV"]')[0].innerHTML = "Basic TV (" + metronet_TV_Packages[0] + ")"
         $('label[for="standardTV"]')[0].innerHTML = "Standard TV (" + metronet_TV_Packages[1] + ")"
         $('label[for="preferredTV"]')[0].innerHTML = "Preferred TV (" + metronet_TV_Packages[2] + ")"
