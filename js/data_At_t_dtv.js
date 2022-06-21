@@ -34,15 +34,15 @@ var at_t_dtv_ModemRental = {
 	Modem_And_Router: "$10/month",
 };
 
-var at_t_dtv_InternetOnly = {
-	I_0_Mbps: "$0/month",
-	I_50_Mbps: "$59/month",
-	I_100_Mbps: "$79/month",
-	I_300_Mbps: "$89/month",
-	I_600_Mbps: "$99/month",
-	I_900_Mbps: "$109/month",
-	I_1200_Mbps: "$70/month",
-};
+// var at_t_dtv_InternetOnly = {
+// 	I_0_Mbps: "$0/month",
+// 	I_50_Mbps: "$59/month",
+// 	I_100_Mbps: "$79/month",
+// 	I_300_Mbps: "$89/month",
+// 	I_600_Mbps: "$99/month",
+// 	I_900_Mbps: "$109/month",
+// 	I_1200_Mbps: "$70/month",
+// };
 
 var at_t_dtv_InstallationFee = {
 	Fiber: "Free",

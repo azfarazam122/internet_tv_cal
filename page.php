@@ -89,13 +89,16 @@ if (isset($_SESSION['username'])) {
                 <div class="tab-menu no-of-total-tabs" id="tab_13" onclick="displayTabs(this)">
                     AT&T_DTV Stream
                 </div>
+                <div class="tab-menu no-of-total-tabs" id="tab_14" onclick="displayTabs(this)">
+                    DTV Satelite
+                </div>
                 <!-- ------------ -->
             </div>
 
             <div class="my-3">
                 <!-- ____________________________________________________________________________ -->
                 <!-- AT & T -->
-                <div id="tabDetails_1" style="display: none">
+                <div id="tabDetails_1">
                     <h1 class="section-heading-main">AT&T</h1>
                     <div class="row register-form">
                         <!-- ____________________________ -->
@@ -4569,7 +4572,7 @@ if (isset($_SESSION['username'])) {
 
                 <!-- ____________________________________________________________________________ -->
                 <!-- AT&T_DTV Stream -->
-                <div id="tabDetails_13">
+                <div id="tabDetails_13" style="display:none;">
                     <h1 class="section-heading-main"> AT&T_DTV Stream</h1>
                     <div class="row register-form">
                         <!-- ____________________________ -->
@@ -4610,7 +4613,7 @@ if (isset($_SESSION['username'])) {
                                         <div class="form-check my-3">
                                             <input class="form-check-input channelLineup-at_t_dtv" type="checkbox"
                                                 name="at_t_dtv_channelLineup_checkboxes" onchange="runOperation_Tab13()"
-                                                id="at_t_dtv_Premier" value="$80" />
+                                                id="at_t_dtv_Premier" value="$90" />
                                             <label class="form-check-label font-weight-bold" for="at_t_dtv_Premier">
                                                 DTV Stream - Premier (HBOMax included)
                                             </label>
@@ -5051,7 +5054,571 @@ if (isset($_SESSION['username'])) {
                         </div>
                     </div>
                 </div>
+
                 <!-- ____________________________________________________________________________ -->
+                <!-- DTV Satelite -->
+                <div id="tabDetails_14" style="display:none;">
+                    <h1 class="section-heading-main"> DTV Satelite</h1>
+                    <div class="row register-form">
+                        <!-- ____________________________ -->
+                        <div class="col-md-7">
+                            <h3 class="section-heading text-center">DTV TV Options</h3>
+                            <div class="py-3">
+                                <p style="color: #3fb718; font-size: 16px; font-weight: bold">
+                                    <u><a href="https://www.xfinity.com/learn/channel-lineup">
+                                            Channel Lineup</a></u>
+                                </p>
+                                <div class="row" style="text-align: left">
+                                    <div class="col-md-6" style="margin-top: 10px">
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input channelLineup-dtv" type="checkbox"
+                                                name="dtv_channelLineup_checkboxes" onchange="runOperation_Tab14()"
+                                                id="dtv_Entertainment" value="$30" />
+                                            <label class="form-check-label font-weight-bold" for="dtv_Entertainment">
+                                                DTV Satelite - Entertainment
+                                            </label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input channelLineup-dtv" type="checkbox"
+                                                name="dtv_channelLineup_checkboxes" onchange="runOperation_Tab14()"
+                                                id="dtv_Choice" checked value="$70" />
+                                            <label class="form-check-label font-weight-bold" for="dtv_Choice">
+                                                DTV Satelite - Choice (NFL Sunday Ticket Included)
+                                            </label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input channelLineup-dtv" type="checkbox"
+                                                name="dtv_channelLineup_checkboxes" onchange="runOperation_Tab14()"
+                                                id="dtv_Ultimate" value="$80" />
+                                            <label class="form-check-label font-weight-bold" for="dtv_Ultimate">
+                                                DTV Satelite - Ultimate (NFL Sunday Ticket Included)
+                                            </label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input channelLineup-dtv" type="checkbox"
+                                                name="dtv_channelLineup_checkboxes" onchange="runOperation_Tab14()"
+                                                id="dtv_Premier" value="$90" />
+                                            <label class="form-check-label font-weight-bold" for="dtv_Premier">
+                                                DTV Satelite - Premier (NFL Sunday Ticket Included)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="label-heading">TV's</p>
+                                        <input type="text" id="dtv_tv" />
+                                        <!-- -------------- -->
+                                        <div>
+                                            <p class="label-heading">Equipment Options</p>
+                                            <div style="text-align: left">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="dtv_EquipmentOptions_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_20HourDVR"
+                                                        value="$10" />
+                                                    <label class="form-check-label" for="dtv_20HourDVR">20 Hour
+                                                        DVR (Free)</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="dtv_EquipmentOptions_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_UnlimitedHourDVR"
+                                                        value="$20" />
+                                                    <label class="form-check-label" for="dtv_UnlimitedHourDVR">Unlimited
+                                                        DVR ($10)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- -------------- -->
+                                        <div>
+                                            <p class="label-heading">Premium Options</p>
+                                            <div class="checkbox-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_Desportes" value="$5" />
+                                                    <label class="form-check-label" for="dtv_Desportes">
+                                                        Desportes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_EnEspanol"
+                                                        value="$15" />
+                                                    <label class="form-check-label" for="dtv_EnEspanol">
+                                                        En Espanol
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_Brazilian" checked
+                                                        value="$30" />
+                                                    <label class="form-check-label" for="dtv_Brazilian">
+                                                        Brazilian
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_Vietnamese"
+                                                        value="$20" />
+                                                    <label class="form-check-label" for="dtv_Vietnamese">
+                                                        Vietnamese
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_LatinoKorean"
+                                                        value="$30" />
+                                                    <label class="form-check-label" for="dtv_LatinoKorean">
+                                                        Korean
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_HBOMax"
+                                                        value="$14.99" />
+                                                    <label class="form-check-label" for="dtv_HBOMax">
+                                                        HBOMax
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_Cinemax" value="$11" />
+                                                    <label class="form-check-label" for="dtv_Cinemax">
+                                                        Cinemax
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_Epix" value="$6" />
+                                                    <label class="form-check-label" for="dtv_Epix"> Epix</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_Showtime" value="$11" />
+                                                    <label class="form-check-label" for="dtv_Showtime">
+                                                        Showtime
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_Starz" value="$11" />
+                                                    <label class="form-check-label" for="dtv_Starz">
+                                                        Starz
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_MoviesExtraPack"
+                                                        value="$5" />
+                                                    <label class="form-check-label" for="dtv_MoviesExtraPack">
+                                                        Movies Extra pack
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_MLB_ExtraInnings"
+                                                        value="$139.99" />
+                                                    <label class="form-check-label" for="dtv_MLB_ExtraInnings">
+                                                        MLB Extra Innings
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_MLS_DirectKick"
+                                                        value="$89.00" />
+                                                    <label class="form-check-label" for="dtv_MLS_DirectKick">
+                                                        MLS Direct Kick
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_FoxSoccerPlus"
+                                                        value="$14.99" />
+                                                    <label class="form-check-label" for="dtv_FoxSoccerPlus">
+                                                        Fox Soccer Plus
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="dtv_PremiumChannels_checkboxes"
+                                                        onchange="runOperation_Tab14()" id="dtv_NFL_SundayTicket"
+                                                        value="$395.99" />
+                                                    <label class="form-check-label" for="dtv_NFL_SundayTicket">
+                                                        NFL Sunday Ticket
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- -------------- -->
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <!-- -------------- -->
+                            <h3 class="section-heading text-center">DTV Internet Options</h3>
+                            <div style="text-align: center">
+                                <label class="label-heading">Modem Rental</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="dtv_modernRental"
+                                            onchange="runOperation_Tab14()" id="modemAndRouter_ModemRental" checked
+                                            value="Modem & Router" />
+                                        <label class="form-check-label" for="modemAndRouter_ModemRental">Modem &
+                                            Router</label>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <input type="text" id="dtv_Internet" />
+                                </div>
+                                <!-- -------------- -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>
+                                        <span style="font-size: 14px; font-weight: bold">
+                                            <u>Add Phone</u></span>
+                                        <div style="text-align: left">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="dtv_AddPhone_checkboxes" id="dtv_AddPhoneYes" value="yes"
+                                                    onchange="runOperation_Tab14()" checked />
+                                                <label class="form-check-label" for="dtv_AddPhoneYes">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="dtv_AddPhone_checkboxes" id="dtv_AddPhoneNo"
+                                                    onchange="runOperation_Tab14()" value="no" />
+                                                <label class="form-check-label" for="dtv_AddPhoneNo">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        <span style="font-size: 14px; font-weight: bold">
+                                            <u>Activation Fee</u></span>
+                                        <div style="text-align: left">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="dtv_activationFee_checkboxes" id="dtv_activationFeeYes"
+                                                    value="yes" onchange="runOperation_Tab14()" checked />
+                                                <label class="form-check-label" for="dtv_activationFeeYes">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio"
+                                                    name="dtv_activationFee_checkboxes" id="dtv_activationFeeNo"
+                                                    onchange="runOperation_Tab14()" value="no" />
+                                                <label class="form-check-label" for="dtv_activationFeeNo">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ________________________________________________ -->
+                            <!-- ________________________________________________ -->
+                            <!-- THIS PART SHOULD BE ADDED IN CUSTOMER VERSION TOOO -->
+                            <!-- -------------- -->
+                            <h3 style="margin-top: 80px;" class="section-heading text-center">Top Selling Points</h3>
+                            <div class="p-1">
+                                <div>
+                                    <table class="table" id="dtv_TopSellingPointsSection">
+                                        <tbody id="dtv_TopSellingPointsSectionBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- -------------- -->
+                            <h3 style="margin-top: 20px;" class="section-heading text-center">Required New Service
+                                Information</h3>
+                            <div class="p-1">
+                                <div>
+                                    <table class="table" id="dtv_RequiredNewServiceInfoSection">
+                                        <tbody id="dtv_RequiredNewServiceInfoSectionBody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- -------------- -->
+                            <h3 style="margin-top: 20px;" class="section-heading text-center">Required Disconnection
+                                Information</h3>
+                            <div class="p-1">
+                                <div>
+                                    <table class="table" id="dtv_RequiredDisconnectionInformationSection">
+                                        <tbody id="dtv_RequiredDisconnectionInformationSectionBody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- -------------- -->
+                            <h3 style="margin-top: 20px;" class="section-heading text-center">Additional Service
+                                Information</h3>
+                            <div class="p-1">
+                                <div>
+                                    <table class="table" id="dtv_AdditionalServiceInformationSection">
+                                        <tbody id="dtv_AdditionalServiceInformationSectionBody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- -------------- -->
+                            <!-- ________________________________________________ -->
+                            <!-- ________________________________________________ -->
+                            <!-- THIS PART SHOULD BE ADDED IN CUSTOMER VERSION TOOO -->
+                            <!-- -------------- -->
+                        </div>
+                        <!-- ____________________________ -->
+                        <div class="col-md-5">
+                            <div class="summary-section">
+                                <h3 style="text-align: center">Summary</h3>
+                                <div>
+                                    <table class="table" id="dtv_PromotionSection">
+                                        <thead>
+                                            <th style='text-align:left;'>Promotions</th>
+                                        </thead>
+                                        <tbody id="dtv_PromotionSectionBody"></tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <table class="table" id="dtv_UpdateSection">
+                                        <thead>
+                                            <th style='text-align:left;'>Service Add-On’s</th>
+                                        </thead>
+                                        <tbody id="dtv_UpdateSectionBody"></tbody>
+                                    </table>
+                                </div>
+
+                                <div>
+                                    <table class="table" id="dtv_InstallationOptionsSection">
+                                        <thead>
+                                            <th style='text-align:left;'>Installation Options</th>
+                                        </thead>
+                                        <tbody id="dtv_InstallationOptionsSectionBody"></tbody>
+                                    </table>
+                                </div>
+
+                                <div>
+                                    <table class="table" id="dtvTelevisionSummary">
+                                        <thead>
+                                            <th style='text-align:left;' colspan="2">Television Summary</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th style='text-align:left;' scope="row" id="dtv_ChannelLineup_Text">
+                                                </th>
+                                                <td style="display:none;" id="dtv_ChannelLineup_Price"></td>
+                                            </tr>
+                                            <tr id="tvbox_1_Text_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_tvbox_1_Text">1st
+                                                    TV Box</th>
+                                                <td id="dtv_tvbox_1_Price"></td>
+                                            </tr>
+                                            <tr id="tvbox_2_Text_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_tvbox_2_Text">2nd
+                                                    TV Box</th>
+                                                <td id="dtv_tvbox_2_Price"></td>
+                                            </tr>
+                                            <tr id="tvbox_3_Text_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_tvbox_3_Text">3rd
+                                                    TV Box</th>
+                                                <td id="dtv_tvbox_3_Price"></td>
+                                            </tr>
+                                            <tr id="tvbox_4_Text_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_tvbox_4_Text">4th
+                                                    TV Box</th>
+                                                <td id="dtv_tvbox_4_Price"></td>
+                                            </tr>
+                                            <tr id="tvbox_5_Text_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_tvbox_5_Text">5th
+                                                    TV Box</th>
+                                                <td id="dtv_tvbox_5_Price"></td>
+                                            </tr>
+                                            <tr id="tvbox_6_Text_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_tvbox_6_Text">6th
+                                                    TV Box</th>
+                                                <td id="dtv_tvbox_6_Price"></td>
+                                            </tr>
+                                            <tr>
+                                                <th style='text-align:left;' scope="row" id="dtv_equipment_Text">
+                                                </th>
+                                                <td id="dtv_equipment_Price"></td>
+                                            </tr>
+
+                                            <tr id="premiumText_1_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_1_premium_Text">
+                                                    Desportes
+                                                </th>
+                                                <td id="dtv_1_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_2_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_2_premium_Text">
+                                                    En Espanol</th>
+                                                <td id="dtv_2_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_3_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_3_premium_Text">
+                                                    Brazilian</th>
+                                                <td id="dtv_3_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_4_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_4_premium_Text">
+                                                    Vietnamese</th>
+                                                <td id="dtv_4_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_5_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_5_premium_Text">
+                                                    Latino Korean</th>
+                                                <td id="dtv_5_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_6_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_6_premium_Text">
+                                                    HBOMax
+                                                </th>
+                                                <td id="dtv_6_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_7_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_7_premium_Text">
+                                                    Cinemax
+                                                </th>
+                                                <td id="dtv_7_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_8_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_8_premium_Text">
+                                                    Epix
+                                                </th>
+                                                <td id="dtv_8_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_9_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_9_premium_Text">
+                                                    Showtime
+                                                </th>
+                                                <td id="dtv_9_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_10_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_10_premium_Text">
+                                                    Starz
+                                                </th>
+                                                <td id="dtv_10_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_11_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_11_premium_Text">
+                                                    Movies Extra pack
+                                                </th>
+                                                <td id="dtv_11_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_12_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_12_premium_Text">
+                                                    MLB Extra Innings
+                                                </th>
+                                                <td id="dtv_12_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_13_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_13_premium_Text">
+                                                    MLS Direct Kick
+                                                </th>
+                                                <td id="dtv_13_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_14_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_14_premium_Text">
+                                                    Fox Soccer Plus
+                                                </th>
+                                                <td id="dtv_14_premium_Price"></td>
+                                            </tr>
+                                            <tr id="premiumText_15_Dtv" style="display: none">
+                                                <th style='text-align:left;' scope="row" id="dtv_15_premium_Text">
+                                                    NFL Sunday Ticket
+                                                </th>
+                                                <td id="dtv_15_premium_Price"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th style='text-align:left;' style="font-weight: bold" scope="row">TOTAL
+                                                </th>
+                                                <td id="dtv_TotalTelevision_Price"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- ------------------------------------------- -->
+                                <div>
+                                    <table class="table">
+                                        <thead>
+                                            <th style="font-size: 14px;text-align:left;" colspan="2">Internet Summary
+                                            </th>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <th style='text-align:left;' scope="row" id="dtv_modernRental_Text">
+                                                </th>
+                                                <td id="dtv_modernRental_Price"></td>
+                                            </tr>
+                                            <tr>
+                                                <th style='text-align:left;' scope="row" id="dtv_addPhone_Text">Phone
+                                                </th>
+                                                <td id="dtv_addPhone_Price"></td>
+
+                                            </tr>
+                                            <tr>
+                                                <th style='text-align:left;' scope="row" id="dtv_activationFee_Text">
+                                                    Activation Fee</th>
+                                                <td id="dtv_activationFee_Price"></td>
+                                            </tr>
+                                            <tr>
+                                                <th style='text-align:left;' scope="row">TOTAL</th>
+                                                <td id="dtv_TotalInternet_Price"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- ------------------------------------------- -->
+                                <div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th style='text-align:left;' scope="row" id="dtv_discount_Text">
+                                                    Bundle Price</th>
+                                                <td id="dtv_bundle_Price"></td>
+                                            </tr>
+                                            <tr style="padding-top: 20px">
+                                                <th style='text-align:left;' scope="row">GRAND TOTAL:</th>
+                                                <td id="dtv_TotalOfAll_Price"></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <!-- ------------------------------------------- -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ____________________________________________________________________________ -->
+
             </div>
             <div class="text-center" style="margin: 40px">
                 <button type="button" name="" id="" style="color: white; background: #3fb718; margin-bottom: 40px"
@@ -5189,6 +5756,7 @@ if (isset($_SESSION['username'])) {
     <script src="js/data_CenturyLink.js"></script>
     <script src="js/data_RCN.js"></script>
     <script src="js/data_At_t_dtv.js"></script>
+    <script src="js/data_Dtv.js"></script>
 
     <script src="js/cal.js"></script>
     <script src="js/storingCustomerData.js"></script>
@@ -6140,7 +6708,149 @@ if (isset($_SESSION['username'])) {
 
 
             summaryMessage =
-                document.getElementsByClassName("summary-section")[1].innerHTML;
+                document.getElementsByClassName("summary-section")[12].innerHTML;
+            // ________________________________________________
+            // ___________________________________________________
+            let uniqueLinkGenerated = false;
+            if (uniqueLinkForSpecificUser != "") {
+                uniqueLinkGenerated = true;
+            } else {
+                uniqueLinkGenerated = false;
+            }
+            // ___________________________________________________
+            $.ajax({
+                url: "./php/submit_email.php",
+                type: "POST",
+                data: {
+                    userName: UsernameOfCustomer,
+                    uniqueLinkOfCustomer: uniqueLinkForSpecificUser,
+                    name: userData[0].name,
+                    email: userData[0].email,
+                    mailhost: userData[0].mail_host,
+                    mailport: userData[0].mail_port,
+                    mailencryption: userData[0].mail_encryption,
+                    mailauth: userData[0].mail_auth,
+                    mailfrom: userData[0].mail_from_address,
+                    mailusername: userData[0].mail_username,
+                    mailpassword: userData[0].mail_password,
+                    customeremail: document.getElementById("staticEmail").value,
+                    summarymessage: summaryMessage,
+                    inputsmessage: inputsMessage,
+                },
+                success: function(data) {
+                    debugger;
+                    if (uniqueLinkGenerated == true) {
+                        console.log("Mail Send! Successfully");
+                        $('#myExampleModal').modal('show');
+                        forInsertingDataInEmail_Data_Table()
+                    } else {
+                        console.log("Mail Send! Successfully");
+                        $('#myExampleModal2').modal('show');
+                    }
+                    // console.log("Mail Send! Successfully");
+                    // $('#myExampleModal').modal('show');
+
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(XMLHttpRequest);
+                    console.log("Status: " + textStatus);
+                    console.log("Error: " + errorThrown);
+                    console.log("ERROR");
+                },
+            });
+        } else if (document.getElementById("tabDetails_14").style.display == "") {
+            // COMCAST Input Fields
+            if (
+                jQuery("input[name=dtv_channelLineup_checkboxes]:checked").val() !=
+                undefined
+            ) {
+                var dtv_channelLineup_SelectedValue = document.getElementById(
+                    jQuery("input[name=dtv_channelLineup_checkboxes]:checked")[0].id
+                ).nextSibling.nextSibling.outerText;
+
+                var dtv_tvSlider_SelectedValue = slider29.val();
+
+                var dtv_equipmentOptions_SelectedValue = document.getElementById(
+                    jQuery("input[name=dtv_EquipmentOptions_checkboxes]:checked")[0].id
+                ).nextSibling.nextSibling.outerText;
+
+                var dtv_premiumOptions_SelectedValue = [];
+                var dtv_arrayForPremiumOptions = [
+                    'Desportes: " $5.00"',
+                    'En_Espanol: "$15.00"',
+                    'Brazilian: " $30.00"',
+                    'Vietnamese: " $20.00"',
+                    'Korean: "$30.00"',
+                    'HBOMax: "$14.99"',
+                    'Cinemax: "$11.00"',
+                    'Epix: "$6.00"',
+                    'Showtime: "$11.00"',
+                    'Starz: "$11.00"',
+                    'Movies_Extra_pack: "$5.00"',
+                ];
+                for (
+                    let index = 0; index <
+                    document.getElementsByName("dtv_PremiumChannels_checkboxes").length; index++
+                ) {
+                    if (
+                        document.getElementsByName("dtv_PremiumChannels_checkboxes")[index]
+                        .checked == true
+                    ) {
+                        dtv_premiumOptions_SelectedValue.push(
+                            dtv_arrayForPremiumOptions[index]
+                        );
+                    }
+                }
+            }
+            var dtv_modemRental_SelectedValue = jQuery(
+                "input[name=dtv_modernRental]:checked"
+            ).val();
+
+            var dtv_internetOptionsSlider_SelectedValue = slider30.val();
+
+            var dtv_addPhone_SelectedValue = document.getElementById(
+                jQuery("input[name=dtv_AddPhone_checkboxes]:checked")[0].id
+            ).nextSibling.nextSibling.outerText;
+            var dtv_activationFee_SelectedValue = document.getElementById(
+                jQuery("input[name=dtv_activationFee_checkboxes]:checked")[0].id
+            ).nextSibling.nextSibling.outerText;
+
+
+
+            inputsMessage = "<h1 style='text-align:center;'>DTV Satelite</h1>";
+            inputsMessage += "<br><h3>DTV TV Options</h3>";
+            inputsMessage +=
+                "Channel Lineup = " + dtv_channelLineup_SelectedValue;
+            inputsMessage += "<br> TV's = " + dtv_tvSlider_SelectedValue;
+            inputsMessage +=
+                "<br>Equipment Options = " + dtv_equipmentOptions_SelectedValue;
+            for (
+                let index = 0; index < dtv_premiumOptions_SelectedValue.length; index++
+            ) {
+                if (index == 0) {
+                    inputsMessage +=
+                        "<br>Premium Options = " + dtv_premiumOptions_SelectedValue[index];
+                } else {
+                    inputsMessage += "<br>" + dtv_premiumOptions_SelectedValue[index];
+                }
+            }
+            inputsMessage += "<br><h3>DTV Internet Options</h3>";
+            inputsMessage +=
+                "Modem Rental = " + dtv_modemRental_SelectedValue;
+            inputsMessage +=
+                "<br>DTV Internet Slider = " +
+                dtv_internetOptionsSlider_SelectedValue;
+
+            inputsMessage +=
+                "<br>Phone = " +
+                dtv_addPhone_SelectedValue;
+            inputsMessage +=
+                "<br>Activation Fee = " +
+                dtv_activationFee_SelectedValue;
+
+
+            summaryMessage =
+                document.getElementsByClassName("summary-section")[13].innerHTML;
             // ________________________________________________
             // ___________________________________________________
             let uniqueLinkGenerated = false;
@@ -6191,75 +6901,76 @@ if (isset($_SESSION['username'])) {
                 },
             });
         }
+    }
 
 
-        function forInsertingDataInEmail_Data_Table() {
-            $.ajax({
-                url: "./model/addDataInEmailTable.php",
-                type: "POST",
-                data: {
-                    userName: UsernameOfCustomer,
-                    summarymessage: summaryMessage,
-                    inputsmessage: inputsMessage,
-                },
-                success: function(data) {
-                    debugger;
-                    console.log("Data Submitted Successfully");
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    console.log(XMLHttpRequest);
-                    console.log("Status: " + textStatus);
-                    console.log("Error: " + errorThrown);
-                    console.log("ERROR");
-                },
-            });
+    function forInsertingDataInEmail_Data_Table() {
+        $.ajax({
+            url: "./model/addDataInEmailTable.php",
+            type: "POST",
+            data: {
+                userName: UsernameOfCustomer,
+                summarymessage: summaryMessage,
+                inputsmessage: inputsMessage,
+            },
+            success: function(data) {
+                debugger;
+                console.log("Data Submitted Successfully");
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                console.log(XMLHttpRequest);
+                console.log("Status: " + textStatus);
+                console.log("Error: " + errorThrown);
+                console.log("ERROR");
+            },
+        });
 
-        }
+    }
 
 
-        function setLabelsByDefaultsFromData() {
-            // AT & T
-            $('label[for="entertainment"]')[0].innerHTML = "Entertainment (" + at_t_TV_Packages[0] + ")"
-            $('label[for="choice"]')[0].innerHTML = "Choice (" + at_t_TV_Packages[1] + ")"
-            $('label[for="ultimate"]')[0].innerHTML = "Ultimate (" + at_t_TV_Packages[2] + ")"
-            $('label[for="Premier"]')[0].innerHTML = "Premier (" + at_t_TV_Packages[3] + ")"
-            // COMCAST
-            $('label[for="basic"]')[0].innerHTML = "Basic (" + comcast_TV_Packages[0] + ")"
-            $('label[for="extra"]')[0].innerHTML = "Extra (" + comcast_TV_Packages[1] + ")"
-            $('label[for="preferred"]')[0].innerHTML = "Preferred (" + comcast_TV_Packages[2] + ")"
-            // SPECTRUM
-            $('label[for="tv_select"]')[0].innerHTML = "Tv Select (" + spectrum_TV_Packages[0] + ")"
-            $('label[for="tv_silver"]')[0].innerHTML = "Tv Silver (" + spectrum_TV_Packages[1] + ")"
-            $('label[for="tv_gold"]')[0].innerHTML = "Tv Gold (" + spectrum_TV_Packages[2] + ")"
-            // METRONET
-            $('label[for="basicTV"]')[0].innerHTML = "Basic TV (" + metronet_TV_Packages[0] + ")"
-            $('label[for="standardTV"]')[0].innerHTML = "Standard TV (" + metronet_TV_Packages[1] + ")"
-            $('label[for="preferredTV"]')[0].innerHTML = "Preferred TV (" + metronet_TV_Packages[2] + ")"
-            // DIRECTV
-            $('label[for="directv_PreferredChoice"]')[0].innerHTML = "Preferred Choice (" + directv_TV_Packages[0] +
-                ")"
-            $('label[for="directv_Entertainment"]')[0].innerHTML = "Entertainment (" + directv_TV_Packages[1] + ")"
-            $('label[for="directv_Choice"]')[0].innerHTML = "Choice (" + directv_TV_Packages[2] + ")"
-            $('label[for="directv_Ultimate"]')[0].innerHTML = "Ultimate (" + directv_TV_Packages[3] + ")"
-            $('label[for="directv_Premier"]')[0].innerHTML = "Premier (" + directv_TV_Packages[4] + ")"
-            // I3 BROADBAND
-            $('label[for="i3_Broadband_mustView_TV"]')[0].innerHTML = "MustView TV (" + i3_Broadband_TV_Packages[0] +
-                ")"
-            $('label[for="i3_Broadband_maxView_TV"]')[0].innerHTML = "MaxView TV (" + i3_Broadband_TV_Packages[1] + ")"
-            $('label[for="i3_Broadband_megaView_TV"]')[0].innerHTML = "MegaView TV (" + i3_Broadband_TV_Packages[2] +
-                ")"
-            // WOW
-            $('label[for="wow_smallCable"]')[0].innerHTML = "Small Cable (" + wow_TV_Packages[0] + ")"
-            $('label[for="wow_mediumCable"]')[0].innerHTML = "Medium Cable (" + wow_TV_Packages[1] + ")"
-            $('label[for="wow_largeCable"]')[0].innerHTML = "Large Cable (" + wow_TV_Packages[2] + ")"
-            // MEDIACOM
-            $('label[for="mediacom_local_TV"]')[0].innerHTML = "Local TV (" + mediacom_TV_Packages[0] + ")"
-            $('label[for="mediacom_essential_TV"]')[0].innerHTML = "Essential TV (" + mediacom_TV_Packages[1] + ")"
-            $('label[for="mediacom_variety_TV"]')[0].innerHTML = "Variety TV (" + mediacom_TV_Packages[2] + ")"
-            // RCN
-            $('label[for="rcn_Basic_TV"]')[0].innerHTML = "Basic TV (" + rcn_TV_Packages[0] + ")"
-            $('label[for="rcn_Signature_TV"]')[0].innerHTML = "Signature TV (" + rcn_TV_Packages[1] + ")"
-        }
+    function setLabelsByDefaultsFromData() {
+        // AT & T
+        $('label[for="entertainment"]')[0].innerHTML = "Entertainment (" + at_t_TV_Packages[0] + ")"
+        $('label[for="choice"]')[0].innerHTML = "Choice (" + at_t_TV_Packages[1] + ")"
+        $('label[for="ultimate"]')[0].innerHTML = "Ultimate (" + at_t_TV_Packages[2] + ")"
+        $('label[for="Premier"]')[0].innerHTML = "Premier (" + at_t_TV_Packages[3] + ")"
+        // COMCAST
+        $('label[for="basic"]')[0].innerHTML = "Basic (" + comcast_TV_Packages[0] + ")"
+        $('label[for="extra"]')[0].innerHTML = "Extra (" + comcast_TV_Packages[1] + ")"
+        $('label[for="preferred"]')[0].innerHTML = "Preferred (" + comcast_TV_Packages[2] + ")"
+        // SPECTRUM
+        $('label[for="tv_select"]')[0].innerHTML = "Tv Select (" + spectrum_TV_Packages[0] + ")"
+        $('label[for="tv_silver"]')[0].innerHTML = "Tv Silver (" + spectrum_TV_Packages[1] + ")"
+        $('label[for="tv_gold"]')[0].innerHTML = "Tv Gold (" + spectrum_TV_Packages[2] + ")"
+        // METRONET
+        $('label[for="basicTV"]')[0].innerHTML = "Basic TV (" + metronet_TV_Packages[0] + ")"
+        $('label[for="standardTV"]')[0].innerHTML = "Standard TV (" + metronet_TV_Packages[1] + ")"
+        $('label[for="preferredTV"]')[0].innerHTML = "Preferred TV (" + metronet_TV_Packages[2] + ")"
+        // DIRECTV
+        $('label[for="directv_PreferredChoice"]')[0].innerHTML = "Preferred Choice (" + directv_TV_Packages[0] +
+            ")"
+        $('label[for="directv_Entertainment"]')[0].innerHTML = "Entertainment (" + directv_TV_Packages[1] + ")"
+        $('label[for="directv_Choice"]')[0].innerHTML = "Choice (" + directv_TV_Packages[2] + ")"
+        $('label[for="directv_Ultimate"]')[0].innerHTML = "Ultimate (" + directv_TV_Packages[3] + ")"
+        $('label[for="directv_Premier"]')[0].innerHTML = "Premier (" + directv_TV_Packages[4] + ")"
+        // I3 BROADBAND
+        $('label[for="i3_Broadband_mustView_TV"]')[0].innerHTML = "MustView TV (" + i3_Broadband_TV_Packages[0] +
+            ")"
+        $('label[for="i3_Broadband_maxView_TV"]')[0].innerHTML = "MaxView TV (" + i3_Broadband_TV_Packages[1] + ")"
+        $('label[for="i3_Broadband_megaView_TV"]')[0].innerHTML = "MegaView TV (" + i3_Broadband_TV_Packages[2] +
+            ")"
+        // WOW
+        $('label[for="wow_smallCable"]')[0].innerHTML = "Small Cable (" + wow_TV_Packages[0] + ")"
+        $('label[for="wow_mediumCable"]')[0].innerHTML = "Medium Cable (" + wow_TV_Packages[1] + ")"
+        $('label[for="wow_largeCable"]')[0].innerHTML = "Large Cable (" + wow_TV_Packages[2] + ")"
+        // MEDIACOM
+        $('label[for="mediacom_local_TV"]')[0].innerHTML = "Local TV (" + mediacom_TV_Packages[0] + ")"
+        $('label[for="mediacom_essential_TV"]')[0].innerHTML = "Essential TV (" + mediacom_TV_Packages[1] + ")"
+        $('label[for="mediacom_variety_TV"]')[0].innerHTML = "Variety TV (" + mediacom_TV_Packages[2] + ")"
+        // RCN
+        $('label[for="rcn_Basic_TV"]')[0].innerHTML = "Basic TV (" + rcn_TV_Packages[0] + ")"
+        $('label[for="rcn_Signature_TV"]')[0].innerHTML = "Signature TV (" + rcn_TV_Packages[1] + ")"
+    }
     </script>
 </body>
 
